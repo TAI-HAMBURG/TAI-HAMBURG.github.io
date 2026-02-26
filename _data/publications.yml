@@ -1,0 +1,1587 @@
+- title: 'Reviewing the Reviewer: Elevating Peer Review Quality through LLM-Guided
+    Feedback'
+  date: 2026
+  abstract: Peer review is central to scientific quality, yet reliance on simple heuristics
+    -- lazy thinking -- has lowered standards. Prior work treats lazy thinking detection
+    as a single-label task, but review segments may exhibit multiple issues, including
+    broader clarity problems, or specificity issues. Turning detection into actionable
+    improvements requires guideline-aware feedback, which is currently missing. We
+    introduce an LLM-driven framework that decomposes reviews into argumentative segments,
+    identifies issues via a neurosymbolic module combining LLM features with traditional
+    classifiers, and generates targeted feedback using issue-specific templates refined
+    by a genetic algorithm. Experiments show our method outperforms zero-shot LLM
+    baselines and improves review quality by up to 92.4\%. We also release LazyReviewPlus,
+    a dataset of 1,309 sentences labeled for lazy thinking and specificity.
+  venue: ''
+  type: conference
+  authors: Sukannya Purkayastha, Qile Wan, Anne Lauscher, Lizhen Qu, Iryna Gurevych
+  pdf: https://arxiv.org/abs/2602.10118
+- title: 'TempViz: On the Evaluation of Temporal Knowledge in Text-to-Image Models'
+  date: 2026
+  abstract: Time alters the visual appearance of entities in our world, like objects,
+    places, and animals. Thus, for accurately generating contextually-relevant images,
+    knowledge and reasoning about time can be crucial (e.g., for generating a landscape
+    in spring vs. in winter). Yet, although substantial work exists on understanding
+    and improving temporal knowledge in natural language processing, research on how
+    temporal phenomena appear and are handled in text-to-image (T2I) models remains
+    scarce. We address this gap with TempViz, the first data set to holistically evaluate
+    temporal knowledge in image generation, consisting of 7.9k prompts and more than
+    600 reference images. Using TempViz, we study the capabilities of five T2I models
+    across five temporal knowledge categories. Human evaluation shows that temporal
+    competence is generally weak, with no model exceeding 75% accuracy across categories.
+    Towards larger-scale studies, we also examine automated evaluation methods, comparing
+    several established approaches against human judgments. However, none of these
+    approaches provides a reliable assessment of temporal cues - further indicating
+    the pressing need for future research on temporal knowledge in T2I.
+  venue: arXiv.org
+  type: conference
+  authors: Carolin Holtermann, Nina Krebs, Anne Lauscher
+  pdf: https://arxiv.org/abs/2601.14951
+- title: 'SoS: Analysis of Surface over Semantics in Multilingual Text-To-Image Generation'
+  date: 2026
+  abstract: Text-to-image (T2I) models are increasingly employed by users worldwide.
+    However, prior research has pointed to the high sensitivity of T2I towards particular
+    input languages - when faced with languages other than English (i.e., different
+    surface forms of the same prompt), T2I models often produce culturally stereotypical
+    depictions, prioritizing the surface over the prompt's semantics. Yet a comprehensive
+    analysis of this behavior, which we dub Surface-over-Semantics (SoS), is missing.
+    We present the first analysis of T2I models'SoS tendencies. To this end, we create
+    a set of prompts covering 171 cultural identities, translated into 14 languages,
+    and use it to prompt seven T2I models. To quantify SoS tendencies across models,
+    languages, and cultures, we introduce a novel measure and analyze how the tendencies
+    we identify manifest visually. We show that all but one model exhibit strong surface-level
+    tendency in at least two languages, with this effect intensifying across the layers
+    of T2I text encoders. Moreover, these surface tendencies frequently correlate
+    with stereotypical visual depictions.
+  venue: ''
+  type: conference
+  authors: Carolin Holtermann, Florian Schneider, Anne Lauscher
+  pdf: https://arxiv.org/abs/2601.16803
+- title: 'Around the World in 24 Hours: Probing LLM Knowledge of Time and Place'
+  date: 2025
+  abstract: Reasoning over time and space is essential for understanding our world.
+    However, the abilities of language models in this area are largely unexplored
+    as previous work has tested their abilities for logical reasoning in terms of
+    time and space in isolation or only in simple or artificial environments. In this
+    paper, we present the first evaluation of the ability of language models to jointly
+    reason over time and space. To enable our analysis, we create GeoTemp, a dataset
+    of 320k prompts covering 289 cities in 217 countries and 37 time zones. Using
+    GeoTemp, we evaluate eight open chat models of three different model families
+    for different combinations of temporal and geographic knowledge. We find that
+    most models perform well on reasoning tasks involving only temporal knowledge
+    and that overall performance improves with scale. However, performance remains
+    constrained in tasks that require connecting temporal and geographical information.
+    We do not find clear correlations of performance with specific geographic regions.
+    Instead, we find a significant performance increase for location names with low
+    model perplexity, suggesting their repeated occurrence during model training.
+    We further demonstrate that their performance is heavily influenced by prompt
+    formulation - a direct injection of geographical knowledge leads to performance
+    gains, whereas, surprisingly, techniques like chain-of-thought prompting decrease
+    performance on simpler tasks.
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Carolin Holtermann, Paul Röttger, Anne Lauscher
+  pdf: https://arxiv.org/abs/2506.03984
+- title: 'LazyReview: A Dataset for Uncovering Lazy Thinking in NLP Peer Reviews'
+  date: 2025
+  abstract: null
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Sukannya Purkayastha, Zhuang Li, Anne Lauscher, Lizhen Qu, Iryna Gurevych
+  pdf: https://doi.org/10.18653/v1/2025.acl-long.165
+- title: Agents of Discovery
+  date: 2025
+  abstract: 'The substantial data volumes encountered in modern particle physics and
+    other domains of fundamental physics research allow (and require) the use of increasingly
+    complex data analysis tools and workflows. While the use of machine learning (ML)
+    tools for data analysis has recently proliferated, these tools are typically special-purpose
+    algorithms that rely, for example, on encoded physics knowledge to reach optimal
+    performance. In this work, we investigate a new and orthogonal direction: Using
+    recent progress in large language models (LLMs) to create a team of agents --
+    instances of LLMs with specific subtasks -- that jointly solve data analysis-based
+    research problems in a way similar to how a human researcher might: by creating
+    code to operate standard tools and libraries (including ML systems) and by building
+    on results of previous iterations. If successful, such agent-based systems could
+    be deployed to automate routine analysis components to counteract the increasing
+    complexity of modern tool chains. To investigate the capabilities of current-generation
+    commercial LLMs, we consider the task of anomaly detection via the publicly available
+    and highly-studied LHC Olympics dataset. Several current models by OpenAI (GPT-4o,
+    o4-mini, GPT-4.1, and GPT-5) are investigated and their stability tested. Overall,
+    we observe the capacity of the agent-based system to solve this data analysis
+    problem. The best agent-created solutions mirror the performance of human state-of-the-art
+    results.'
+  venue: arXiv.org
+  type: conference
+  authors: S. Diefenbacher, Anna Hallin, G. Kasieczka, Michael Krämer, Anne Lauscher,
+    Tim Lukas
+  pdf: https://arxiv.org/abs/2509.08535
+- title: Detecting Hallucinations in Authentic LLM-Human Interactions
+  date: 2025
+  abstract: As large language models (LLMs) are increasingly applied in sensitive
+    domains such as medicine and law, hallucination detection has become a critical
+    task. Although numerous benchmarks have been proposed to advance research in this
+    area, most of them are artificially constructed--either through deliberate hallucination
+    induction or simulated interactions--rather than derived from genuine LLM-human
+    dialogues. Consequently, these benchmarks fail to fully capture the characteristics
+    of hallucinations that occur in real-world usage. To address this limitation,
+    we introduce AuthenHallu, the first hallucination detection benchmark built entirely
+    from authentic LLM-human interactions. For AuthenHallu, we select and annotate
+    samples from genuine LLM-human dialogues, thereby providing a faithful reflection
+    of how LLMs hallucinate in everyday user interactions. Statistical analysis shows
+    that hallucinations occur in 31.4% of the query-response pairs in our benchmark,
+    and this proportion increases dramatically to 60.0% in challenging domains such
+    as Math&Number Problems. Furthermore, we explore the potential of using vanilla
+    LLMs themselves as hallucination detectors and find that, despite some promise,
+    their current performance remains insufficient in real-world scenarios.
+  venue: arXiv.org
+  type: conference
+  authors: Yujie Ren, Niklas Gruhlke, Anne Lauscher
+  pdf: https://arxiv.org/abs/2510.10539
+- title: Large Language Models Discriminate Against Speakers of German Dialects
+  date: 2025
+  abstract: 'Dialects represent a significant component of human culture and are found
+    across all regions of the world. In Germany, more than 40% of the population speaks
+    a regional dialect (Adler and Hansen, 2022). However, despite cultural importance,
+    individuals speaking dialects often face negative societal stereotypes. We examine
+    whether such stereotypes are mirrored by large language models (LLMs). We draw
+    on the sociolinguistic literature on dialect perception to analyze traits commonly
+    associated with dialect speakers. Based on these traits, we assess the dialect
+    naming bias and dialect usage bias expressed by LLMs in two tasks: an association
+    task and a decision task. To assess a model''s dialect usage bias, we construct
+    a novel evaluation corpus that pairs sentences from seven regional German dialects
+    (e.g., Alemannic and Bavarian) with their standard German counterparts. We find
+    that: (1) in the association task, all evaluated LLMs exhibit significant dialect
+    naming and dialect usage bias against German dialect speakers, reflected in negative
+    adjective associations; (2) all models reproduce these dialect naming and dialect
+    usage biases in their decision making; and (3) contrary to prior work showing
+    minimal bias with explicit demographic mentions, we find that explicitly labeling
+    linguistic demographics--German dialect speakers--amplifies bias more than implicit
+    cues like dialect usage.'
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Minh Duc Bui, Carolin Holtermann, Valentin Hofmann, Anne Lauscher, K. Wense
+  pdf: https://arxiv.org/abs/2509.13835
+- title: How Much Do LLMs Hallucinate across Languages? On Multilingual Estimation
+    of LLM Hallucination in the Wild
+  date: 2025
+  abstract: null
+  venue: arXiv.org
+  type: conference
+  authors: Saad Obaid Ul Islam, Anne Lauscher, Goran Glavas
+  pdf: https://doi.org/10.48550/arXiv.2502.12769
+- title: 'Mind the Inclusivity Gap: Multilingual Gender-Neutral Translation Evaluation
+    with mGeNTE'
+  date: 2025
+  abstract: Avoiding the propagation of undue (binary) gender inferences and default
+    masculine language remains a key challenge towards inclusive multilingual technologies,
+    particularly when translating into languages with extensive gendered morphology.
+    Gender-neutral translation (GNT) represents a linguistic strategy towards fairer
+    communication across languages. However, research on GNT is limited to a few resources
+    and language pairs. To address this gap, we introduce mGeNTE, an expert-curated
+    resource, and use it to conduct the first systematic multilingual evaluation of
+    inclusive translation with state-of-the-art instruction-following language models
+    (LMs). Experiments on en-es/de/it/el reveal that while models can recognize when
+    neutrality is appropriate, they cannot consistently produce neutral translations,
+    limiting their usability. To probe this behavior, we enrich our evaluation with
+    interpretability analyses that identify task-relevant features and offer initial
+    insights into the internal dynamics of LM-based GNT.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Beatrice Savoldi, Eleonora Cupin, Manjinder Thind, Anne Lauscher, Andrea
+    Piergentili, L. Bentivogli
+  pdf: https://arxiv.org/abs/2501.09409
+- title: 'SHADES: Towards a Multilingual Assessment of Stereotypes in Large Language
+    Models'
+  date: 2025
+  abstract: 'Large Language Models (LLMs), the bedrock of many “artificial intelligence”
+    (AI) applications, are known to reproduce social biases present in their training
+    data. Yet resources to measure and control this issue are limited. Research identifying
+    and mitigating stereotype biases have primarily been concentrated around English,
+    lagging the rapid advancement of LLMs in multilingual settings. To help further
+    advance the ability to address stereotype bias in AI systems, we introduce a new
+    multi-lingual dataset: SHADES . 1 Designed for examining culturally-specific stereotypes
+    that may be learned by LLMs, SHADES includes over 300 stereotypes from 37 regions,
+    translated across 16 languages and annotated with multiple features to aid multilingual
+    stereotype analysis. All statements in all languages are paired with templates,
+    to serve as a resource for unlimited'
+  venue: North American Chapter of the Association for Computational Linguistics
+  type: conference
+  authors: Margaret Mitchellet al.
+  pdf: https://doi.org/10.18653/v1/2025.naacl-long.600
+- title: LazyReview A Dataset for Uncovering Lazy Thinking in NLP Peer Reviews
+  date: 2025
+  abstract: 'Peer review is a cornerstone of quality control in scientific publishing.
+    With the increasing workload, the unintended use of `quick'' heuristics, referred
+    to as lazy thinking, has emerged as a recurring issue compromising review quality.
+    Automated methods to detect such heuristics can help improve the peer-reviewing
+    process. However, there is limited NLP research on this issue, and no real-world
+    dataset exists to support the development of detection tools. This work introduces
+    LazyReview, a dataset of peer-review sentences annotated with fine-grained lazy
+    thinking categories. Our analysis reveals that Large Language Models (LLMs) struggle
+    to detect these instances in a zero-shot setting. However, instruction-based fine-tuning
+    on our dataset significantly boosts performance by 10-20 performance points, highlighting
+    the importance of high-quality training data. Furthermore, a controlled experiment
+    demonstrates that reviews revised with lazy thinking feedback are more comprehensive
+    and actionable than those written without such feedback. We will release our dataset
+    and the enhanced guidelines that can be used to train junior reviewers in the
+    community. (Code available here: https://github.com/UKPLab/acl2025-lazy-review)'
+  venue: arXiv.org
+  type: conference
+  authors: Sukannya Purkayastha, Zhuang Li, Anne Lauscher, Lizhen Qu, Iryna Gurevych
+  pdf: https://arxiv.org/abs/2504.11042
+- title: 'Decision-Making with Deliberation: Meta-reviewing as a Document-grounded
+    Dialogue'
+  date: 2025
+  abstract: 'Meta-reviewing is a pivotal stage in the peer-review process, serving
+    as the final step in determining whether a paper is recommended for acceptance.
+    Prior research on meta-reviewing has treated this as a summarization problem over
+    review reports. However, complementary to this perspective, meta-reviewing is
+    a decision-making process that requires weighing reviewer arguments and placing
+    them within a broader context. Prior research has demonstrated that decision-makers
+    can be effectively assisted in such scenarios via dialogue agents. In line with
+    this framing, we explore the practical challenges for realizing dialog agents
+    that can effectively assist meta-reviewers. Concretely, we first address the issue
+    of data scarcity for training dialogue agents by generating synthetic data using
+    Large Language Models (LLMs) based on a self-refinement strategy to improve the
+    relevance of these dialogues to expert domains. Our experiments demonstrate that
+    this method produces higher-quality synthetic data and can serve as a valuable
+    resource towards training meta-reviewing assistants. Subsequently, we utilize
+    this data to train dialogue agents tailored for meta-reviewing and find that these
+    agents outperform \emph{off-the-shelf} LLM-based assistants for this task. Finally,
+    we apply our agents in real-world meta-reviewing scenarios and confirm their effectiveness
+    in enhancing the efficiency of meta-reviewing.\footnote{Code available at: https://github.com/UKPLab/eacl2026-meta-review-as-dialog'
+  venue: arXiv.org
+  type: conference
+  authors: Sukannya Purkayastha, Nils Dycke, Anne Lauscher, Iryna Gurevych
+  pdf: https://arxiv.org/abs/2508.05283
+- title: 'Aligned Probing: Relating Toxic Behavior and Model Internals'
+  date: 2025
+  abstract: We introduce aligned probing, a novel interpretability framework that
+    aligns the behavior of language models (LMs), based on their outputs, and their
+    internal representations (internals). Using this framework, we examine over 20
+    OLMo, Llama, and Mistral models, bridging behavioral and internal perspectives
+    for toxicity for the first time. Our results show that LMs strongly encode information
+    about the toxicity level of inputs and subsequent outputs, particularly in lower
+    layers. Focusing on how unique LMs differ offers both correlative and causal evidence
+    that they generate less toxic output when strongly encoding information about
+    the input toxicity. We also highlight the heterogeneity of toxicity, as model
+    behavior and internals vary across unique attributes such as Threat. Finally,
+    four case studies analyzing detoxification, multi-prompt evaluations, model quantization,
+    and pre-training dynamics underline the practical impact of aligned probing with
+    further concrete insights. Our findings contribute to a more holistic understanding
+    of LMs, both within and beyond the context of toxicity.
+  venue: arXiv.org
+  type: conference
+  authors: Andreas Waldis, Vagrant Gautam, Anne Lauscher, Dietrich Klakow, Iryna Gurevych
+  pdf: https://arxiv.org/abs/2503.13390
+- title: How Much Do LLMs Hallucinate across Languages? On Realistic Multilingual
+    Estimation of LLM Hallucination
+  date: 2025
+  abstract: In the age of misinformation, hallucination - the tendency of Large Language
+    Models (LLMs) to generate non-factual or unfaithful responses - represents the
+    main risk for their global utility. Despite LLMs becoming increasingly multilingual,
+    the vast majority of research on detecting and quantifying LLM hallucination are
+    (a) English-centric and (b) focus on machine translation (MT) and summarization,
+    tasks that are less common in realistic settings than open information seeking.
+    In contrast, we aim to quantify the extent of LLM hallucination across languages
+    in knowledge-intensive long-form question answering (LFQA). To this end, we train
+    a multilingual hallucination detection model and conduct a large-scale study across
+    30 languages and 6 open-source LLM families. We start from an English hallucination
+    detection dataset and rely on MT to translate-train a detection model. We also
+    manually annotate gold data for five high-resource languages; we then demonstrate,
+    for these languages, that the estimates of hallucination rates are similar between
+    silver (LLM-generated) and gold test sets, validating the use of silver data for
+    estimating hallucination rates for other languages. For the final rates estimation,
+    we build open-domain QA dataset for 30 languages with LLM-generated prompts and
+    Wikipedia articles as references. Our analysis shows that LLMs, in absolute terms,
+    hallucinate more tokens in high-resource languages due to longer responses, but
+    that the actual hallucination rates (i.e., normalized for length) seems uncorrelated
+    with the sizes of languages'digital footprints. We also find that smaller LLMs
+    hallucinate more, and significantly, LLMs with broader language support display
+    higher hallucination rates.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Saad Obaid ul Islam, Anne Lauscher, Goran Glavas
+  pdf: https://arxiv.org/abs/2502.12769
+- title: GIMMICK - Globally Inclusive Multimodal Multitask Cultural Knowledge Benchmarking
+  date: 2025
+  abstract: Large Vision-Language Models (LVLMs) have recently gained attention due
+    to their distinctive performance and broad applicability. While it has been previously
+    shown that their efficacy in usage scenarios involving non-Western contexts falls
+    short, existing studies are limited in scope, covering just a narrow range of
+    cultures, focusing exclusively on a small number of cultural aspects, or evaluating
+    a limited selection of models on a single task only. Towards globally inclusive
+    LVLM research, we introduce GIMMICK, an extensive multimodal benchmark designed
+    to assess a broad spectrum of cultural knowledge across 144 countries representing
+    six global macro-regions. GIMMICK comprises six tasks built upon three new datasets
+    that span 728 unique cultural events or facets on which we evaluated 20 LVLMs
+    and 11 LLMs, including five proprietary and 26 open-weight models of all sizes.
+    We systematically examine (1) regional cultural biases, (2) the influence of model
+    size, (3) input modalities, and (4) external cues. Our analyses reveal strong
+    biases toward Western cultures across models and tasks and highlight strong correlations
+    between model size and performance, as well as the effectiveness of multimodal
+    input and external geographic cues. We further find that models have more knowledge
+    of tangible than intangible aspects (e.g., food vs. rituals) and that they excel
+    in recognizing broad cultural origins but struggle with a more nuanced understanding.
+  venue: arXiv.org
+  type: conference
+  authors: Florian Schneider, Carolin Holtermann, Chris Biemann, Anne Lauscher
+  pdf: https://arxiv.org/abs/2502.13766
+- title: 'Towards Ethical Multi-Agent Systems of Large Language Models: A Mechanistic
+    Interpretability Perspective'
+  date: 2025
+  abstract: 'Large language models (LLMs) have been widely deployed in various applications,
+    often functioning as autonomous agents that interact with each other in multi-agent
+    systems. While these systems have shown promise in enhancing capabilities and
+    enabling complex tasks, they also pose significant ethical challenges. This position
+    paper outlines a research agenda aimed at ensuring the ethical behavior of multi-agent
+    systems of LLMs (MALMs) from the perspective of mechanistic interpretability.
+    We identify three key research challenges: (i) developing comprehensive evaluation
+    frameworks to assess ethical behavior at individual, interactional, and systemic
+    levels; (ii) elucidating the internal mechanisms that give rise to emergent behaviors
+    through mechanistic interpretability; and (iii) implementing targeted parameter-efficient
+    alignment techniques to steer MALMs towards ethical behaviors without compromising
+    their performance.'
+  venue: arXiv.org
+  type: conference
+  authors: Jae Hee Lee, Anne Lauscher, Stefano V. Albrecht
+  pdf: https://arxiv.org/abs/2512.04691
+- title: 'Glitter: A Multi-Sentence, Multi-Reference Benchmark for Gender-Fair German
+    Machine Translation'
+  date: 2025
+  abstract: ','
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: A. Pranav, Janiça Hackenbuchner, Giuseppe Attanasio, Manuel Lardelli, Anne
+    Lauscher
+  pdf: https://doi.org/10.18653/v1/2025.findings-emnlp.1002
+- title: The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+    Answers
+  date: 2025
+  abstract: Large language models (LLMs) can correctly answer"When was Einstein born?"yet
+    fail to provide the same date when writing about Einstein's life revealing a fundamental
+    inconsistency in how models access factual knowledge across task complexities.
+    While models display impressive accuracy on factual question-answering benchmarks,
+    the reliability gap between simple and complex queries remains poorly understood,
+    eroding their trustworthiness. In this work, we introduce Short-Long Form Alignment
+    for Factual Question Answering (SLAQ), a controlled evaluation framework that
+    compares LLMs'answers to the same factual questions asked (a) in isolation (short)
+    vs. (b) integrated into complex queries (long). Looking at 16 LLMs across 600
+    queries, we find a systematic misalignment of answers to the corresponding short
+    and long queries. We further uncover position-dependent accuracy loss and momentum
+    effects where consecutive correct or incorrect answers create self-reinforcing
+    patterns. Through mechanistic analysis, we find that aligned facts activate overlapping
+    model internals, and that metrics based on mechanistic similarity can predict
+    short-long answer alignment with up to 78% accuracy. Our work establishes factual
+    consistency over query complexity as an important aspect of LLMs'trustworthiness
+    and challenges current evaluation practices, which implicitly assume that good
+    performance for simple factual queries implies reliability in more complex knowledge-seeking
+    tasks too.
+  venue: arXiv.org
+  type: conference
+  authors: Saad Obaid Ul Islam, Anne Lauscher, Goran Glavavs
+  pdf: https://arxiv.org/abs/2510.11218
+- title: 'Centurio: On Drivers of Multilingual Ability of Large Vision-Language Model'
+  date: 2025
+  abstract: 'Most Large Vision-Language Models (LVLMs) to date are trained predominantly
+    on English data, which makes them struggle to understand non-English input and
+    fail to generate output in the desired target language. Existing efforts mitigate
+    these issues by adding multilingual training data, but do so in a largely ad-hoc
+    manner, lacking insight into how different training mixes tip the scale for different
+    groups of languages. In this work, we present a comprehensive investigation into
+    the training strategies for massively multilingual LVLMs. First, we conduct a
+    series of multi-stage experiments spanning 13 downstream vision-language tasks
+    and 43 languages, systematically examining: (1) the number of training languages
+    that can be included without degrading English performance and (2) optimal language
+    distributions of pre-training as well as (3) instruction-tuning data. Further,
+    we (4) investigate how to improve multilingual text-in-image understanding, and
+    introduce a new benchmark for the task. Surprisingly, our analysis reveals that
+    one can (i) include as many as 100 training languages simultaneously (ii) with
+    as little as 25-50\% of non-English data, to greatly improve multilingual performance
+    while retaining strong English performance. We further find that (iii) including
+    non-English OCR data in pre-training and instruction-tuning is paramount for improving
+    multilingual text-in-image understanding. Finally, we put all our findings together
+    and train Centurio, a 100-language LVLM, offering state-of-the-art performance
+    in an evaluation covering 14 tasks and 56 languages.'
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Gregor Geigle, Florian Schneider, Carolin Holtermann, Chris Biemann, Radu
+    Timofte, Anne Lauscher, Goran Glavavs
+  pdf: https://arxiv.org/abs/2501.05122
+- title: 'Transforming Science with Large Language Models: A Survey on AI-assisted
+    Scientific Discovery, Experimentation, Content Generation, and Evaluation'
+  date: 2025
+  abstract: With the advent of large multimodal language models, science is now at
+    a threshold of an AI-based technological transformation. Recently, a plethora
+    of new AI models and tools has been proposed, promising to empower researchers
+    and academics worldwide to conduct their research more effectively and efficiently.
+    This includes all aspects of the research cycle, especially (1) searching for
+    relevant literature; (2) generating research ideas and conducting experimentation;
+    generating (3) text-based and (4) multimodal content (e.g., scientific figures
+    and diagrams); and (5) AI-based automatic peer review. In this survey, we provide
+    an in-depth overview over these exciting recent developments, which promise to
+    fundamentally alter the scientific research process for good. Our survey covers
+    the five aspects outlined above, indicating relevant datasets, methods and results
+    (including evaluation) as well as limitations and scope for future research. Ethical
+    concerns regarding shortcomings of these tools and potential for misuse (fake
+    science, plagiarism, harms to research integrity) take a particularly prominent
+    place in our discussion. We hope that our survey will not only become a reference
+    guide for newcomers to the field but also a catalyst for new AI-based initiatives
+    in the area of"AI4Science".
+  venue: arXiv.org
+  type: conference
+  authors: Steffen Egeret al.
+  pdf: https://arxiv.org/abs/2502.05151
+- title: 'FineCite: A Novel Approach For Fine-Grained Citation Context Analysis'
+  date: 2025
+  abstract: null
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Lasse M. Jantsch, Dong-Jae Koh, Seonghwan Yoon, Jisu Lee, Anne Lauscher,
+    Young-Kyoon Suh
+  pdf: https://doi.org/10.18653/v1/2025.findings-acl.1259
+- title: 'Multi³Hate: Multimodal, Multilingual, and Multicultural Hate Speech Detection
+    with Vision-Language Models'
+  date: 2025
+  abstract: null
+  venue: North American Chapter of the Association for Computational Linguistics
+  type: conference
+  authors: Minh Duc Bui, K. Wense, Anne Lauscher
+  pdf: https://www.semanticscholar.org/paper/c6a769562ba7190cac60aa48d90112df155a7772
+- title: 'GIMMICK: Globally Inclusive Multimodal Multitask Cultural Knowledge Benchmarking'
+  date: 2025
+  abstract: null
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Florian Schneider, Carolin Holtermann, Christian Biemann, Anne Lauscher
+  pdf: https://doi.org/10.18653/v1/2025.findings-acl.500
+- title: 'The Echoes of Multilinguality: Tracing Cultural Value Shifts during Language
+    Model Fine-tuning'
+  date: 2024
+  abstract: null
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Rochelle Choenni, Anne Lauscher, Ekaterina Shutova
+  pdf: https://doi.org/10.18653/v1/2024.acl-long.803
+- title: 'Decoding Multilingual Moral Preferences: Unveiling LLM''s Biases Through
+    the Moral Machine Experiment'
+  date: 2024
+  abstract: 'Large language models (LLMs) increasingly find their way into the most
+    diverse areas of our everyday lives. They indirectly influence people''s decisions
+    or opinions through their daily use. Therefore, understanding how and which moral
+    judgements these LLMs make is crucial. However, morality is not universal and
+    depends on the cultural background. This raises the question of whether these
+    cultural preferences are also reflected in LLMs when prompted in different languages
+    or whether moral decision-making is consistent across different languages. So
+    far, most research has focused on investigating the inherent values of LLMs in
+    English. While a few works conduct multilingual analyses of moral bias in LLMs
+    in a multilingual setting, these analyses do not go beyond atomic actions. To
+    the best of our knowledge, a multilingual analysis of moral bias in dilemmas has
+    not yet been conducted.
+
+
+    To address this, our paper builds on the moral machine experiment (MME) to investigate
+    the moral preferences of five LLMs, Falcon, Gemini, Llama, GPT, and MPT, in a
+    multilingual setting and compares them with the preferences collected from humans
+    belonging to different cultures. To accomplish this, we generate 6500 scenarios
+    of the MME and prompt the models in ten languages on which action to take. Our
+    analysis reveals that all LLMs inhibit different moral biases to some degree and
+    that they not only differ from the human preferences but also across multiple
+    languages within the models themselves. Moreover, we find that almost all models,
+    particularly Llama 3, divert greatly from human values and, for instance, prefer
+    saving fewer people over saving more.'
+  venue: AAAI/ACM Conference on AI, Ethics, and Society
+  type: conference
+  authors: Karina Vida, Fabian Damken, Anne Lauscher
+  pdf: https://arxiv.org/abs/2407.15184
+- title: 'Multi3Hate: Multimodal, Multilingual, and Multicultural Hate Speech Detection
+    with Vision-Language Models'
+  date: 2024
+  abstract: 'Warning: this paper contains content that may be offensive or upsetting
+    Hate speech moderation on global platforms poses unique challenges due to the
+    multimodal and multilingual nature of content, along with the varying cultural
+    perceptions. How well do current vision-language models (VLMs) navigate these
+    nuances? To investigate this, we create the first multimodal and multilingual
+    parallel hate speech dataset, annotated by a multicultural set of annotators,
+    called Multi3Hate. It contains 300 parallel meme samples across 5 languages: English,
+    German, Spanish, Hindi, and Mandarin. We demonstrate that cultural background
+    significantly affects multimodal hate speech annotation in our dataset. The average
+    pairwise agreement among countries is just 74%, significantly lower than that
+    of randomly selected annotator groups. Our qualitative analysis indicates that
+    the lowest pairwise label agreement-only 67% between the USA and India-can be
+    attributed to cultural factors. We then conduct experiments with 5 large VLMs
+    in a zero-shot setting, finding that these models align more closely with annotations
+    from the US than with those from other cultures, even when the memes and prompts
+    are presented in the dominant language of the other culture. Code and dataset
+    are available at https://github.com/MinhDucBui/Multi3Hate.'
+  venue: Volume 1
+  type: conference
+  authors: Minh Duc Bui, K. Wense, Anne Lauscher
+  pdf: https://arxiv.org/abs/2411.03888
+- title: 'Ethical Concern Identification in NLP: A Corpus of ACL Anthology Ethics
+    Statements'
+  date: 2024
+  abstract: What ethical concerns, if any, do LLM researchers have? We introduce EthiCon,
+    a corpus of 1,580 ethical concern statements extracted from scientific papers
+    published in the ACL Anthology. We extract ethical concern keywords from the statements
+    and show promising results in automating the concern identification process. Through
+    a survey, we compare the ethical concerns of the corpus to the concerns listed
+    by the general public and professionals in the field. Finally, we compare our
+    retrieved ethical concerns with existing taxonomies pointing to gaps and future
+    research directions.
+  venue: North American Chapter of the Association for Computational Linguistics
+  type: conference
+  authors: Antonia Karamolegkou, Sandrine Schiller Hansen, A. Christopoulou, Filippos
+    Stamatiou, Anne Lauscher, Anders Søgaard
+  pdf: https://arxiv.org/abs/2411.07845
+- title: Why do LLaVA Vision-Language Models Reply to Images in English?
+  date: 2024
+  abstract: We uncover a surprising multilingual bias occurring in a popular class
+    of multimodal vision-language models (VLMs). Including an image in the query to
+    a LLaVA-style VLM significantly increases the likelihood of the model returning
+    an English response, regardless of the language of the query. This paper investigates
+    the causes of this loss with a two-pronged approach that combines extensive ablation
+    of the design space with a mechanistic analysis of the models' internal representations
+    of image and text inputs. Both approaches indicate that the issue stems in the
+    language modelling component of the LLaVA model. Statistically, we find that switching
+    the language backbone for a bilingual language model has the strongest effect
+    on reducing this error. Mechanistically, we provide compelling evidence that visual
+    inputs are not mapped to a similar space as text ones, and that intervening on
+    intermediary attention layers can reduce this bias. Our findings provide important
+    insights to researchers and engineers seeking to understand the crossover between
+    multimodal and multilingual spaces, and contribute to the goal of developing capable
+    and inclusive VLMs for non-English contexts.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Musashi Hinck, Carolin Holtermann, M. L. Olson, Florian Schneider, Sungduk
+    Yu, Anahita Bhiwandiwalla, Anne Lauscher, Shao-Yen Tseng, Vasudev Lal
+  pdf: https://arxiv.org/abs/2407.02333
+- title: Local Contrastive Editing of Gender Stereotypes
+  date: 2024
+  abstract: Stereotypical bias encoded in language models (LMs) poses a threat to
+    safe language technology, yet our understanding of how bias manifests in the parameters
+    of LMs remains incomplete. We introduce local contrastive editing that enables
+    the localization and editing of a subset of weights in a target model in relation
+    to a reference model. We deploy this approach to identify and modify subsets of
+    weights that are associated with gender stereotypes in LMs. Through a series of
+    experiments we demonstrate that local contrastive editing can precisely localize
+    and control a small subset (< 0.5\%) of weights that encode gender bias. Our work
+    (i) advances our understanding of how stereotypical biases can manifest in the
+    parameter space of LMs and (ii) opens up new avenues for developing parameter-efficient
+    strategies for controlling model properties in a contrastive manner.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Marlene Lutz, Rochelle Choenni, Markus Strohmaier, Anne Lauscher
+  pdf: http://arxiv.org/pdf/2410.17739
+- title: 'WinoPron: Revisiting English Winogender Schemas for Consistency, Coverage,
+    and Grammatical Case'
+  date: 2024
+  abstract: 'While measuring bias and robustness in coreference resolution are important
+    goals, such measurements are only as good as the tools we use to measure them.
+    Winogender Schemas (Rudinger et al., 2018) are an influential dataset proposed
+    to evaluate gender bias in coreference resolution, but a closer look reveals issues
+    with the data that compromise its use for reliable evaluation, including treating
+    different pronominal forms as equivalent, violations of template constraints,
+    and typographical errors. We identify these issues and fix them, contributing
+    a new dataset: WinoPron. Using WinoPron, we evaluate two state-of-the-art supervised
+    coreference resolution systems, SpanBERT, and five sizes of FLAN-T5, and demonstrate
+    that accusative pronouns are harder to resolve for all models. We also propose
+    a new method to evaluate pronominal bias in coreference resolution that goes beyond
+    the binary. With this method, we also show that bias characteristics vary not
+    just across pronoun sets (e.g., he vs. she), but also across surface forms of
+    those sets (e.g., him vs. his).'
+  venue: CRAC
+  type: conference
+  authors: Vagrant Gautam, Julius Steuer, Eileen Bingert, R. Johns, Anne Lauscher,
+    Dietrich Klakow
+  pdf: https://arxiv.org/abs/2409.05653
+- title: 'GeFMT: Gender-Fair Language in German Machine Translation'
+  date: 2024
+  abstract: null
+  venue: European Association for Machine Translation Conferences/Workshops
+  type: conference
+  authors: Manuel Lardelli, Anne Lauscher, Giuseppe Attanasio
+  pdf: https://www.semanticscholar.org/paper/5c2175bb2831a6991fc1e23b97f851520829a28d
+- title: 'Stop! In the Name of Flaws: Disentangling Personal Names and Sociodemographic
+    Attributes in NLP'
+  date: 2024
+  abstract: 'Personal names simultaneously differentiate individuals and categorize
+    them in ways that are important in a given society. While the natural language
+    processing community has thus associated personal names with sociodemographic
+    characteristics in a variety of tasks, researchers have engaged to varying degrees
+    with the established methodological problems in doing so. To guide future work
+    that uses names and sociodemographic characteristics, we provide an overview of
+    relevant research: first, we present an interdisciplinary background on names
+    and naming. We then survey the issues inherent to associating names with sociodemographic
+    attributes, covering problems of validity (e.g., systematic error, construct validity),
+    as well as ethical concerns (e.g., harms, differential impact, cultural insensitivity).
+    Finally, we provide guiding questions along with normative recommendations to
+    avoid validity and ethical pitfalls when dealing with names and sociodemographic
+    characteristics in natural language processing.'
+  venue: GEBNLP
+  type: conference
+  authors: Vagrant Gautam, Arjun Subramonian, Anne Lauscher, O. Keyes
+  pdf: https://arxiv.org/pdf/2405.17159
+- title: What Can Natural Language Processing Do for Peer Review?
+  date: 2024
+  abstract: The number of scientific articles produced every year is growing rapidly.
+    Providing quality control over them is crucial for scientists and, ultimately,
+    for the public good. In modern science, this process is largely delegated to peer
+    review -- a distributed procedure in which each submission is evaluated by several
+    independent experts in the field. Peer review is widely used, yet it is hard,
+    time-consuming, and prone to error. Since the artifacts involved in peer review
+    -- manuscripts, reviews, discussions -- are largely text-based, Natural Language
+    Processing has great potential to improve reviewing. As the emergence of large
+    language models (LLMs) has enabled NLP assistance for many new tasks, the discussion
+    on machine-assisted peer review is picking up the pace. Yet, where exactly is
+    help needed, where can NLP help, and where should it stand aside? The goal of
+    our paper is to provide a foundation for the future efforts in NLP for peer-reviewing
+    assistance. We discuss peer review as a general process, exemplified by reviewing
+    at AI conferences. We detail each step of the process from manuscript submission
+    to camera-ready revision, and discuss the associated challenges and opportunities
+    for NLP assistance, illustrated by existing work. We then turn to the big challenges
+    in NLP for peer review as a whole, including data acquisition and licensing, operationalization
+    and experimentation, and ethical issues. To help consolidate community efforts,
+    we create a companion repository that aggregates key datasets pertaining to peer
+    review. Finally, we issue a detailed call for action for the scientific community,
+    NLP and AI researchers, policymakers, and funding bodies to help bring the research
+    in NLP for peer review forward. We hope that our work will help set the agenda
+    for research in machine-assisted scientific quality control in the age of AI,
+    within the NLP community and beyond.
+  venue: arXiv.org
+  type: conference
+  authors: Ilia Kuznetsovet al.
+  pdf: https://arxiv.org/abs/2405.06563
+- title: The Lou Dataset - Exploring the Impact of Gender-Fair Language in German
+    Text Classification
+  date: 2024
+  abstract: Gender-fair language, an evolving linguistic variation in German, fosters
+    inclusion by addressing all genders or using neutral forms. However, there is
+    a notable lack of resources to assess the impact of this language shift on language
+    models (LMs) might not been trained on examples of this variation. Addressing
+    this gap, we present Lou, the first dataset providing high-quality reformulations
+    for German text classification covering seven tasks, like stance detection and
+    toxicity classification. We evaluate 16 mono- and multi-lingual LMs and find substantial
+    label flips, reduced prediction certainty, and significantly altered attention
+    patterns. However, existing evaluations remain valid, as LM rankings are consistent
+    across original and reformulated instances. Our study provides initial insights
+    into the impact of gender-fair language on classification for German. However,
+    these findings are likely transferable to other languages, as we found consistent
+    patterns in multi-lingual and English LMs.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Andreas Waldis, Joel Birrer, Anne Lauscher, Iryna Gurevych
+  pdf: https://arxiv.org/abs/2409.17929
+- title: 'Robust Pronoun Fidelity with English LLMs: Are they Reasoning, Repeating,
+    or Just Biased?'
+  date: 2024
+  abstract: 'Abstract Robust, faithful, and harm-free pronoun use for individuals
+    is an important goal for language model development as their use increases, but
+    prior work tends to study only one or two of these characteristics at a time.
+    To measure progress towards the combined goal, we introduce the task of pronoun
+    fidelity: Given a context introducing a co-referring entity and pronoun, the task
+    is to reuse the correct pronoun later. We present RUFF, a carefully designed dataset
+    of over 5 million instances to measure robust pronoun fidelity in English, and
+    we evaluate 37 model variants from nine popular families, across architectures
+    (encoder-only, decoder-only, and encoder-decoder) and scales (11M-70B parameters).
+    When an individual is introduced with a pronoun, models can mostly faithfully
+    reuse this pronoun in the next sentence, but they are significantly worse with
+    she/her/her, singular they, and neopronouns. Moreover, models are easily distracted
+    by non-adversarial sentences discussing other people; even one sentence with a
+    distractor pronoun causes accuracy to drop on average by 34 percentage points.
+    Our results show that pronoun fidelity is not robust, in a simple, naturalistic
+    setting where humans achieve nearly 100% accuracy. We encourage researchers to
+    bridge the gaps we find and to carefully evaluate reasoning in settings where
+    superficial repetition might inflate perceptions of model performance.'
+  venue: Transactions of the Association for Computational Linguistics
+  type: conference
+  authors: Vagrant Gautam, Eileen Bingert, D. Zhu, Anne Lauscher, D. Klakow
+  pdf: https://doi.org/10.1162/tacl_a_00719
+- title: 'SoK: Towards Security and Safety of Edge AI'
+  date: 2024
+  abstract: Advanced AI applications have become increasingly available to a broad
+    audience, e.g., as centrally managed large language models (LLMs). Such centralization
+    is both a risk and a performance bottleneck - Edge AI promises to be a solution
+    to these problems. However, its decentralized approach raises additional challenges
+    regarding security and safety. In this paper, we argue that both of these aspects
+    are critical for Edge AI, and even more so, their integration. Concretely, we
+    survey security and safety threats, summarize existing countermeasures, and collect
+    open challenges as a call for more research in this area.
+  venue: arXiv.org
+  type: conference
+  authors: Tatjana Wingarz, Anne Lauscher, Janick Edinger, Dominik Kaaser, Stefan
+    Schulte, Mathias Fischer
+  pdf: https://arxiv.org/abs/2410.05349
+- title: Argument Quality Assessment in the Age of Instruction-Following Large Language
+    Models
+  date: 2024
+  abstract: The computational treatment of arguments on controversial issues has been
+    subject to extensive NLP research, due to its envisioned impact on opinion formation,
+    decision making, writing education, and the like. A critical task in any such
+    application is the assessment of an argument’s quality - but it is also particularly
+    challenging. In this position paper, we start from a brief survey of argument
+    quality research, where we identify the diversity of quality notions and the subjectiveness
+    of their perception as the main hurdles towards substantial progress on argument
+    quality assessment. We argue that the capabilities of instruction-following large
+    language models (LLMs) to leverage knowledge across contexts enable a much more
+    reliable assessment. Rather than just fine-tuning LLMs towards leaderboard chasing
+    on assessment tasks, they need to be instructed systematically with argumentation
+    theories and scenarios as well as with ways to solve argument-related problems.
+    We discuss the real-world opportunities and ethical issues emerging thereby.
+  venue: International Conference on Language Resources and Evaluation
+  type: conference
+  authors: Henning Wachsmuth, Gabriella Lapesa, Elena Cabrio, Anne Lauscher, Joonsuk
+    Park, Eva Maria Vecchi, S. Villata, Timon Ziegenbein
+  pdf: https://arxiv.org/abs/2403.16084
+- title: What the Weight?! A Unified Framework for Zero-Shot Knowledge Composition
+  date: 2024
+  abstract: The knowledge encapsulated in a model is the core factor determining its
+    final performance on downstream tasks. Much research in NLP has focused on efficient
+    methods for storing and adapting different types of knowledge, e.g., in dedicated
+    modularized structures, and on how to effectively combine these, e.g., by learning
+    additional parameters. However, given the many possible options, a thorough understanding
+    of the mechanisms involved in these compositions is missing, and hence it remains
+    unclear which strategies to utilize. To address this research gap, we propose
+    a novel framework for zero-shot module composition, which encompasses existing
+    and some novel variations for selecting, weighting, and combining parameter modules
+    under a single unified notion. Focusing on the scenario of domain knowledge and
+    adapter layers, our framework provides a systematic unification of concepts, allowing
+    us to conduct the first comprehensive benchmarking study of various zero-shot
+    knowledge composition strategies. In particular, we test two module combination
+    methods and five selection and weighting strategies for their effectiveness and
+    efficiency in an extensive experimental setup. Our results highlight the efficacy
+    of ensembling but also hint at the power of simple though often-ignored weighting
+    methods. Further in-depth analyses allow us to understand the role of weighting
+    vs. top-k selection, and show that, to a certain extent, the performance of adapter
+    composition can even be predicted.
+  venue: Findings
+  type: conference
+  authors: Carolin Holtermann, Markus Frohmann, Navid Rekabsaz, Anne Lauscher
+  pdf: https://arxiv.org/abs/2401.12756
+- title: Large language models for human-machine collaborative particle accelerator
+    tuning through natural language
+  date: 2024
+  abstract: Autonomous tuning of particle accelerators is an active and challenging
+    research field with the goal of enabling advanced accelerator technologies and
+    cutting-edge high-impact applications, such as physics discovery, cancer research,
+    and material sciences. A challenge with autonomous accelerator tuning remains
+    that the most capable algorithms require experts in optimization and machine learning
+    to implement them for every new tuning task. Here, we propose the use of large
+    language models (LLMs) to tune particle accelerators. We demonstrate on a proof-of-principle
+    example the ability of LLMs to tune an accelerator subsystem based on only a natural
+    language prompt from the operator, and compare their performance to state-of-the-art
+    optimization algorithms, such as Bayesian optimization and reinforcement learning–trained
+    optimization. In doing so, we also show how LLMs can perform numerical optimization
+    of a nonlinear real-world objective. Ultimately, this work represents another
+    complex task that LLMs can solve and promises to help accelerate the deployment
+    of autonomous tuning algorithms to day-to-day particle accelerator operations.
+  venue: Science Advances
+  type: conference
+  authors: Jan Kaiser, A. Eichler, Anne Lauscher
+  pdf: https://arxiv.org/abs/2405.08888
+- title: 'The Echoes of Multilinguality: Tracing Cultural Value Shifts during LM Fine-tuning'
+  date: 2024
+  abstract: Texts written in different languages reflect different culturally-dependent
+    beliefs of their writers. Thus, we expect multilingual LMs (MLMs), that are jointly
+    trained on a concatenation of text in multiple languages, to encode different
+    cultural values for each language. Yet, as the 'multilinguality' of these LMs
+    is driven by cross-lingual sharing, we also have reason to belief that cultural
+    values bleed over from one language into another. This limits the use of MLMs
+    in practice, as apart from being proficient in generating text in multiple languages,
+    creating language technology that can serve a community also requires the output
+    of LMs to be sensitive to their biases (Naous et al., 2023). Yet, little is known
+    about how cultural values emerge and evolve in MLMs (Hershcovich et al., 2022a).
+    We are the first to study how languages can exert influence on the cultural values
+    encoded for different test languages, by studying how such values are revised
+    during fine-tuning. Focusing on the fine-tuning stage allows us to study the interplay
+    between value shifts when exposed to new linguistic experience from different
+    data sources and languages. Lastly, we use a training data attribution method
+    to find patterns in the fine-tuning examples, and the languages that they come
+    from, that tend to instigate value shifts.
+  venue: arXiv.org
+  type: conference
+  authors: Rochelle Choenni, Anne Lauscher, Ekaterina Shutova
+  pdf: https://arxiv.org/abs/2405.12744
+- title: 'Sparks of Fairness: Preliminary Evidence of Commercial Machine Translation
+    as English-to-German Gender-Fair Dictionaries'
+  date: 2024
+  abstract: null
+  venue: GITT
+  type: conference
+  authors: Manuel Lardelli, Timm Dill, Giuseppe Attanasio, Anne Lauscher
+  pdf: https://www.semanticscholar.org/paper/cbdb1e8a00ffec722d5dc40f47dba8245054b78f
+- title: Evaluating the Elementary Multilingual Capabilities of Large Language Models
+    with MultiQ
+  date: 2024
+  abstract: Large language models (LLMs) need to serve everyone, including a global
+    majority of non-English speakers. However, most LLMs today, and open LLMs in particular,
+    are often intended for use in just English (e.g. Llama2, Mistral) or a small handful
+    of high-resource languages (e.g. Mixtral, Qwen). Recent research shows that, despite
+    limits in their intended use, people prompt LLMs in many different languages.
+    Therefore, in this paper, we investigate the basic multilingual capabilities of
+    state-of-the-art open LLMs beyond their intended use. For this purpose, we introduce
+    MultiQ, a new silver standard benchmark for basic open-ended question answering
+    with 27.4k test questions across a typologically diverse set of 137 languages.
+    With MultiQ, we evaluate language fidelity, i.e. whether models respond in the
+    prompted language, and question answering accuracy. All LLMs we test respond faithfully
+    and/or accurately for at least some languages beyond their intended use. Most
+    models are more accurate when they respond faithfully. However, differences across
+    models are large, and there is a long tail of languages where models are neither
+    accurate nor faithful. We explore differences in tokenization as a potential explanation
+    for our findings, identifying possible correlations that warrant further investigation.
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Carolin Holtermann, Paul Röttger, Timm Dill, Anne Lauscher
+  pdf: https://arxiv.org/abs/2403.03814
+- title: Exploring Jiu-Jitsu Argumentation for Writing Peer Review Rebuttals
+  date: 2023
+  abstract: 'In many domains of argumentation, people''s arguments are driven by so-called
+    attitude roots, i.e., underlying beliefs and world views, and their corresponding
+    attitude themes. Given the strength of these latent drivers of arguments, recent
+    work in psychology suggests that instead of directly countering surface-level
+    reasoning (e.g., falsifying given premises), one should follow an argumentation
+    style inspired by the Jiu-Jitsu ''soft'' combat system (Hornsey and Fielding,
+    2017): first, identify an arguer''s attitude roots and themes, and then choose
+    a prototypical rebuttal that is aligned with those drivers instead of invalidating
+    those. In this work, we are the first to explore Jiu-Jitsu argumentation for peer
+    review by proposing the novel task of attitude and theme-guided rebuttal generation.
+    To this end, we enrich an existing dataset for discourse structure in peer reviews
+    with attitude roots, attitude themes, and canonical rebuttals. To facilitate this
+    process, we recast established annotation concepts from the domain of peer reviews
+    (e.g., aspects a review sentence is relating to) and train domain-specific models.
+    We then propose strong rebuttal generation strategies, which we benchmark on our
+    novel dataset for the task of end-to-end attitude and theme-guided rebuttal generation
+    and two subtasks.'
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Sukannya Purkayastha, Anne Lauscher, Iryna Gurevych
+  pdf: https://arxiv.org/abs/2311.03998
+- title: Values, Ethics, Morals? On the Use of Moral Concepts in NLP Research
+  date: 2023
+  abstract: With language technology increasingly affecting individuals' lives, many
+    recent works have investigated the ethical aspects of NLP. Among other topics,
+    researchers focused on the notion of morality, investigating, for example, which
+    moral judgements language models make. However, there has been little to no discussion
+    of the terminology and the theories underpinning those efforts and their implications.
+    This lack is highly problematic, as it hides the works' underlying assumptions
+    and hinders a thorough and targeted scientific debate of morality in NLP. In this
+    work, we address this research gap by (a) providing an overview of some important
+    ethical concepts stemming from philosophy and (b) systematically surveying the
+    existing literature on moral NLP w.r.t. their philosophical foundation, terminology,
+    and data basis. For instance, we analyse what ethical theory an approach is based
+    on, how this decision is justified, and what implications it entails. Our findings
+    surveying 92 papers show that, for instance, most papers neither provide a clear
+    definition of the terms they use nor adhere to definitions from philosophy. Finally,
+    (c) we give three recommendations for future research in the field. We hope our
+    work will lead to a more informed, careful, and sound discussion of morality in
+    language technology.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Karina Vida, Judith Simon, Anne Lauscher
+  pdf: https://arxiv.org/abs/2310.13915
+- title: 'Stereotypes and Smut: The (Mis)representation of Non-cisgender Identities
+    by Text-to-Image Models'
+  date: 2023
+  abstract: Cutting-edge image generation has been praised for producing high-quality
+    images, suggesting a ubiquitous future in a variety of applications. However,
+    initial studies have pointed to the potential for harm due to predictive bias,
+    reflecting and potentially reinforcing cultural stereotypes. In this work, we
+    are the first to investigate how multimodal models handle diverse gender identities.
+    Concretely, we conduct a thorough analysis in which we compare the output of three
+    image generation models for prompts containing cisgender vs. non-cisgender identity
+    terms. Our findings demonstrate that certain non-cisgender identities are consistently
+    (mis)represented as less human, more stereotyped and more sexualised. We complement
+    our experimental analysis with (a)~a survey among non-cisgender individuals and
+    (b) a series of interviews, to establish which harms affected individuals anticipate,
+    and how they would like to be represented. We find respondents are particularly
+    concerned about misrepresentation, and the potential to drive harmful behaviours
+    and beliefs. Simple heuristics to limit offensive content are widely rejected,
+    and instead respondents call for community involvement, curated training data
+    and the ability to customise. These improvements could pave the way for a future
+    where change is led by the affected community, and technology is used to positively
+    ``[portray] queerness in ways that we haven't even thought of'' rather than reproducing
+    stale, offensive stereotypes.
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Eddie L. Ungless, Björn Ross, Anne Lauscher
+  pdf: http://arxiv.org/pdf/2305.17072
+- title: 'A Tale of Pronouns: Interpretability Informs Gender Bias Mitigation for
+    Fairer Instruction-Tuned Machine Translation'
+  date: 2023
+  abstract: Recent instruction fine-tuned models can solve multiple NLP tasks when
+    prompted to do so, with machine translation (MT) being a prominent use case. However,
+    current research often focuses on standard performance benchmarks, leaving compelling
+    fairness and ethical considerations behind. In MT, this might lead to misgendered
+    translations, resulting, among other harms, in the perpetuation of stereotypes
+    and prejudices. In this work, we address this gap by investigating whether and
+    to what extent such models exhibit gender bias in machine translation and how
+    we can mitigate it. Concretely, we compute established gender bias metrics on
+    the WinoMT corpus from English to German and Spanish. We discover that IFT models
+    default to male-inflected translations, even disregarding female occupational
+    stereotypes. Next, using interpretability methods, we unveil that models systematically
+    overlook the pronoun indicating the gender of a target occupation in misgendered
+    translations. Finally, based on this finding, we propose an easy-to-implement
+    and effective bias mitigation solution based on few-shot learning that leads to
+    significantly fairer translations.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Giuseppe Attanasio, F. Plaza-del-Arco, Debora Nozza, Anne Lauscher
+  pdf: https://arxiv.org/abs/2310.12127
+- title: 'AutomaTikZ: Text-Guided Synthesis of Scientific Vector Graphics with TikZ'
+  date: 2023
+  abstract: Generating bitmap graphics from text has gained considerable attention,
+    yet for scientific figures, vector graphics are often preferred. Given that vector
+    graphics are typically encoded using low-level graphics primitives, generating
+    them directly is difficult. To address this, we propose the use of TikZ, a well-known
+    abstract graphics language that can be compiled to vector graphics, as an intermediate
+    representation of scientific figures. TikZ offers human-oriented, high-level commands,
+    thereby facilitating conditional language modeling with any large language model.
+    To this end, we introduce DaTikZ, the first large-scale TikZ dataset consisting
+    of 120k TikZ drawings aligned with captions. We fine-tune LLaMA on DaTikZ, as
+    well as our new model CLiMA, which augments LLaMA with multimodal CLIP embeddings.
+    In both human and automatic evaluation, CLiMA and LLaMA outperform commercial
+    GPT-4 and Claude 2 in terms of similarity to human-created figures, with CLiMA
+    additionally improving text-image alignment. Our detailed analysis shows that
+    all models generalize well and are not susceptible to memorization. GPT-4 and
+    Claude 2, however, tend to generate more simplistic figures compared to both humans
+    and our models. We make our framework, AutomaTikZ, along with model weights and
+    datasets, publicly available.
+  venue: International Conference on Learning Representations
+  type: conference
+  authors: Jonas Belouadi, Anne Lauscher, Steffen Eger
+  pdf: https://arxiv.org/pdf/2310.00367
+- title: 'ScaLearn: Simple and Highly Parameter-Efficient Task Transfer by Learning
+    to Scale'
+  date: 2023
+  abstract: 'Multi-task learning (MTL) has shown considerable practical benefits,
+    particularly when using language models (LMs). While this is commonly achieved
+    by learning $n$ tasks under a joint optimization procedure, some methods, such
+    as AdapterFusion, divide the problem into two stages: (i) task learning, where
+    knowledge specific to a task is encapsulated within sets of parameters (e.g.,
+    adapters), and (ii) transfer, where this already learned knowledge is leveraged
+    for a target task. This separation of concerns provides numerous benefits (e.g.,
+    promoting reusability). However, current two-stage MTL introduces a substantial
+    number of additional parameters. We address this issue by leveraging the usefulness
+    of linearly scaling the output representations of source adapters for transfer
+    learning. We introduce ScaLearn, a simple and highly parameter-efficient two-stage
+    MTL method that capitalizes on the knowledge of the source tasks by learning a
+    minimal set of scaling parameters that enable effective transfer to a target task.
+    Our experiments on three benchmarks (GLUE, SuperGLUE, and HumSet) and two encoder
+    LMs show that ScaLearn consistently outperforms strong baselines with a small
+    number of transfer parameters (~ $0.35$% of those of AdapterFusion). Remarkably,
+    we observe that ScaLearn maintains its strong abilities even when further reducing
+    parameters, achieving competitive results with only $8$ transfer parameters per
+    target task. Our proposed approach thus demonstrates the power of simple scaling
+    as a promise for more efficient task transfer.'
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Markus Frohmann, Carolin Holtermann, Shahed Masoudian, Anne Lauscher, Navid
+    Rekabsaz
+  pdf: https://arxiv.org/pdf/2310.01217
+- title: 'Sensitivity, Performance, Robustness: Deconstructing the Effect of Sociodemographic
+    Prompting'
+  date: 2023
+  abstract: Annotators’ sociodemographic backgrounds (i.e., the individual compositions
+    of their gender, age, educational background, etc.) have a strong impact on their
+    decisions when working on subjective NLP tasks, such as toxic language detection.
+    Often, heterogeneous backgrounds result in high disagreements. To model this variation,
+    recent work has explored sociodemographic prompting, a technique, which steers
+    the output of prompt-based models towards answers that humans with specific sociodemographic
+    profiles would give. However, the available NLP literature disagrees on the efficacy
+    of this technique — it remains unclear for which tasks and scenarios it can help,
+    and the role of the individual factors in sociodemographic prompting is still
+    unexplored. We address this research gap by presenting the largest and most comprehensive
+    study of sociodemographic prompting today. We use it to analyze its influence
+    on model sensitivity, performance and robustness across seven datasets and six
+    instruction-tuned model families. We show that sociodemographic information affects
+    model predictions and can be beneficial for improving zero-shot learning in subjective
+    NLP tasks.However, its outcomes largely vary for different model types, sizes,
+    and datasets, and are subject to large variance with regards to prompt formulations.
+    Most importantly, our results show that sociodemographic prompting should be used
+    with care when used for data annotation or studying LLM alignment.
+  venue: Conference of the European Chapter of the Association for Computational Linguistics
+  type: conference
+  authors: Tilman Beck, Hendrik Schuff, Anne Lauscher, Iryna Gurevych
+  pdf: https://arxiv.org/abs/2309.07034
+- title: What about “em”? How Commercial Machine Translation Fails to Handle (Neo-)Pronouns
+  date: 2023
+  abstract: As 3rd-person pronoun usage shifts to include novel forms, e.g., neopronouns,
+    we need more research on identity-inclusive NLP. Exclusion is particularly harmful
+    in one of the most popular NLP applications, machine translation (MT). Wrong pronoun
+    translations can discriminate against marginalized groups, e.g., non-binary individuals
+    (Dev et al., 2021). In this “reality check”, we study how three commercial MT
+    systems translate 3rd-person pronouns. Concretely, we compare the translations
+    of gendered vs. gender-neutral pronouns from English to five other languages (Danish,
+    Farsi, French, German, Italian), and vice versa, from Danish to English.Our error
+    analysis shows that the presence of a gender-neutral pronoun often leads to grammatical
+    and semantic translation errors. Similarly, gender neutrality is often not preserved.
+    By surveying the opinions of affected native speakers from diverse languages,
+    we provide recommendations to address the issue in future MT research.
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Anne Lauscher, Debora Nozza, Archie Crowley, E. Miltersen, Dirk Hovy
+  pdf: http://arxiv.org/pdf/2305.16051
+- title: 'SocioProbe: What, When, and Where Language Models Learn about Sociodemographics'
+  date: 2022
+  abstract: Pre-trained language models (PLMs) have outperformed other NLP models
+    on a wide range of tasks. Opting for a more thorough understanding of their capabilities
+    and inner workings, researchers have established the extend to which they capture
+    lower-level knowledge like grammaticality, and mid-level semantic knowledge like
+    factual understanding. However, there is still little understanding of their knowledge
+    of higher-level aspects of language. In particular, despite the importance of
+    sociodemographic aspects in shaping our language, the questions of whether, where,
+    and how PLMs encode these aspects, e.g., gender or age, is still unexplored. We
+    address this research gap by probing the sociodemographic knowledge of different
+    single-GPU PLMs on multiple English data sets via traditional classifier probing
+    and information-theoretic minimum description length probing. Our results show
+    that PLMs do encode these sociodemographics, and that this knowledge is sometimes
+    spread across the layers of some of the tested PLMs. We further conduct a multilingual
+    analysis and investigate the effect of supplementary training to further explore
+    to what extent, where, and with what amount of pre-training data the knowledge
+    is encoded. Our overall results indicate that sociodemographic knowledge is still
+    a major challenge for NLP. PLMs require large amounts of pre-training data to
+    acquire the knowledge and models that excel in general language understanding
+    do not seem to own more knowledge about these aspects.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Anne Lauscher, Federico Bianchi, Samuel R. Bowman, Dirk Hovy
+  pdf: https://arxiv.org/pdf/2211.04281
+- title: Fair and Argumentative Language Modeling for Computational Argumentation
+  date: 2022
+  abstract: Although much work in NLP has focused on measuring and mitigating stereotypical
+    bias in semantic spaces, research addressing bias in computational argumentation
+    is still in its infancy. In this paper, we address this research gap and conduct
+    a thorough investigation of bias in argumentative language models. To this end,
+    we introduce ABBA, a novel resource for bias measurement specifically tailored
+    to argumentation. We employ our resource to assess the effect of argumentative
+    fine-tuning and debiasing on the intrinsic bias found in transformer-based language
+    models using a lightweight adapter-based approach that is more sustainable and
+    parameter-efficient than full fine-tuning. Finally, we analyze the potential impact
+    of language model debiasing on the performance in argument quality prediction,
+    a downstream task of computational argumentation. Our results show that we are
+    able to successfully and sustainably remove bias in general and argumentative
+    language models while preserving (and sometimes improving) model performance in
+    downstream tasks. We make all experimental code and data available at https://github.com/umanlp/FairArgumentativeLM.
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Carolin Holtermann, Anne Lauscher, Simone Paolo Ponzetto
+  pdf: http://arxiv.org/pdf/2204.04026
+- title: Can Demographic Factors Improve Text Classification? Revisiting Demographic
+    Adaptation in the Age of Transformers
+  date: 2022
+  abstract: Demographic factors (e.g., gender or age) shape our language. Previous
+    work showed that incorporating demographic factors can consistently improve performance
+    for various NLP tasks with traditional NLP models. In this work, we investigate
+    whether these previous findings still hold with state-of-the-art pretrained Transformer-based
+    language models (PLMs). We use three common specialization methods proven effective
+    for incorporating external knowledge into pretrained Transformers (e.g., domain-specific
+    or geographic knowledge). We adapt the language representations for the demographic
+    dimensions of gender and age, using continuous language modeling and dynamic multi-task
+    learning for adaptation, where we couple language modeling objectives with the
+    prediction of demographic classes. Our results, when employing a multilingual
+    PLM, show substantial gains in task performance across four languages (English,
+    German, French, and Danish), which is consistent with the results of previous
+    work. However, controlling for confounding factors – primarily domain and language
+    proficiency of Transformer-based PLMs – shows that downstream performance gains
+    from our demographic adaptation do not actually stem from demographic knowledge.
+    Our results indicate that demographic specialization of PLMs, while holding promise
+    for positive societal impact, still represents an unsolved problem for (modern)
+    NLP.
+  venue: Findings
+  type: conference
+  authors: Chia-Chien Hung, Anne Lauscher, Dirk Hovy, Simone Paolo Ponzetto, Goran
+    Glavavs
+  pdf: http://arxiv.org/pdf/2210.07362
+- title: 'Back to the Future: On Potential Histories in NLP'
+  date: 2022
+  abstract: 'Machine learning and NLP require the construction of datasets to train
+    and ﬁne-tune models. In this context, previous work has demon-strated the sensitivity
+    of these data sets. For instance, potential societal biases in this data are likely
+    to be encoded and to be ampliﬁed in the models we deploy. In this work, we draw
+    from developments in the ﬁeld of history and take a novel perspective on these
+    prob-lems: considering datasets and models through the lens of historical ﬁction
+    surfaces their po-litical nature, and affords re-conﬁguring how we view the past,
+    such that marginalized discourses are surfaced. Building on such in-sights, we
+    argue that contemporary methods for machine learning are prejudiced towards dominant
+    and hegemonic histories. Employ-ing the example of neopronouns, we show that by
+    surfacing marginalized histories within contemporary conditions, we can create
+    models that better represent the lived realities of tra-ditionally marginalized
+    and excluded commu-nities.'
+  venue: arXiv.org
+  type: conference
+  authors: Zeerak Talat, Anne Lauscher
+  pdf: http://arxiv.org/pdf/2210.06245
+- title: 'FineDeb: A Debiased Finetuning Approach for Language Models'
+  date: 2022
+  abstract: null
+  venue: ''
+  type: conference
+  authors: Soumya Barikeriet al.
+  pdf: https://www.semanticscholar.org/paper/688bb60b90d511c5199e2c37cc247eb9c534be46
+- title: 'Welcome to the Modern World of Pronouns: Identity-Inclusive Natural Language
+    Processing beyond Gender'
+  date: 2022
+  abstract: The world of pronouns is changing – from a closed word class with few
+    members to an open set of terms to reflect identities. However, Natural Language
+    Processing (NLP) barely reflects this linguistic shift, resulting in the possible
+    exclusion of non-binary users, even though recent work outlined the harms of gender-exclusive
+    language technology. The current modeling of 3rd person pronouns is particularly
+    problematic. It largely ignores various phenomena like neopronouns, i.e., novel
+    pronoun sets that are not (yet) widely established. This omission contributes
+    to the discrimination of marginalized and underrepresented groups, e.g., non-binary
+    individuals. It thus prevents gender equality, one of the UN’s sustainable development
+    goals (goal 5). Further, other identity-expressions beyond gender are ignored
+    by current NLP technology. This paper provides an overview of 3rd person pronoun
+    issues for NLP. Based on our observations and ethical considerations, we define
+    a series of five desiderata for modeling pronouns in language technology, which
+    we validate through a survey. We evaluate existing and novel modeling approaches
+    w.r.t. these desiderata qualitatively and quantify the impact of a more discrimination-free
+    approach on an established benchmark dataset.
+  venue: International Conference on Computational Linguistics
+  type: conference
+  authors: Anne Lauscher, Archie Crowley, Dirk Hovy
+  pdf: https://arxiv.org/abs/2202.11923
+- title: Privacy, Interpretability, and Fairness in the Multilingual Space
+  date: 2022
+  abstract: null
+  venue: ''
+  type: conference
+  authors: Martín Abadiet al.
+  pdf: https://www.semanticscholar.org/paper/7edf292c9c6f0d7e704f03fd0ff910075ece1af7
+- title: Multi-task Citation Content Analysis for Clinical Research Publications
+  date: 2022
+  abstract: null
+  venue: ''
+  type: conference
+  authors: J. Devlinet al.
+  pdf: https://www.semanticscholar.org/paper/96a7920df4abb2102698ebbff8e44b58a6665131
+- title: Bridging Fairness and Environmental Sustainability in Natural Language Processing
+  date: 2022
+  abstract: 'Fairness and environmental impact are important research directions for
+    the sustainable development of artificial intelligence. However, while each topic
+    is an active research area in natural language processing (NLP), there is a surprising
+    lack of research on the interplay between the two fields. This lacuna is highly
+    problematic, since there is increasing evidence that an exclusive focus on fairness
+    can actually hinder environmental sustainability, and vice versa. In this work,
+    we shed light on this crucial intersection in NLP by (1) investigating the efficiency
+    of current fairness approaches through surveying example methods for reducing
+    unfair stereotypical bias from the literature, and (2) evaluating a common technique
+    to reduce energy consumption (and thus environmental impact) of English NLP models,
+    knowledge distillation (KD), for its impact on fairness. In this case study, we
+    evaluate the effect of important KD factors, including layer and dimensionality
+    reduction, with respect to: (a) performance on the distillation task (natural
+    language inference and semantic similarity prediction), and (b) multiple measures
+    and dimensions of stereotypical bias (e.g., gender bias measured via the Word
+    Embedding Association Test). Our results lead us to clarify current assumptions
+    regarding the effect of KD on unfair bias: contrary to other findings, we show
+    that KD can actually decrease model fairness.'
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Marius Hessenthaler, Emma Strubell, Dirk Hovy, Anne Lauscher
+  pdf: https://arxiv.org/pdf/2211.04256
+- title: On the Limitations of Sociodemographic Adaptation with Transformers
+  date: 2022
+  abstract: Sociodemographic factors (e.g., gender or age) shape our language. Previous
+    work showed that incorporating specific sociodemographic factors can consistently
+    improve performance for various NLP tasks in traditional NLP models. We investigate
+    whether these previous findings still hold with state-of-the-art pretrained Transformers.
+    We use three common specialization methods proven effective for incorporating
+    external knowledge into pretrained Transformers (e.g., domain-specific or geographic
+    knowledge). We adapt the language representations for the sociodemographic dimensions
+    of gender and age, using continuous language modeling and dynamic multi-task learning
+    for adaptation, where we couple language modeling with the prediction of a sociodemographic
+    class. Our results when employing a multilingual model show substantial performance
+    gains across four languages (English, German, French, and Danish). These findings
+    are in line with the results of previous work and hold promise for successful
+    sociodemographic specialization. However, controlling for confounding factors
+    like domain and language shows that, while sociodemographic adaptation does improve
+    downstream performance, the gains do not always solely stem from sociodemographic
+    knowledge. Our results indicate that sociodemographic specialization, while very
+    important, is still an unresolved problem in NLP.
+  venue: arXiv.org
+  type: conference
+  authors: Chia-Chien Hung, Anne Lauscher, Dirk Hovy, Simone Paolo Ponzetto, Goran
+    Glavavs
+  pdf: http://arxiv.org/pdf/2208.01029
+- title: 'Multi2WOZ: A Robust Multilingual Dataset and Conversational Pretraining
+    for Task-Oriented Dialog'
+  date: 2022
+  abstract: 'Research on (multi-domain) task-oriented dialog (TOD) has predominantly
+    focused on the English language, primarily due to the shortage of robust TOD datasets
+    in other languages, preventing the systematic investigation of cross-lingual transfer
+    for this crucial NLP application area. In this work, we introduce Multi2WOZ, a
+    new multilingual multi-domain TOD dataset, derived from the well-established English
+    dataset MultiWOZ, that spans four typologically diverse languages: Chinese, German,
+    Arabic, and Russian. In contrast to concurrent efforts, Multi2WOZ contains gold-standard
+    dialogs in target languages that are directly comparable with development and
+    test portions of the English dataset, enabling reliable and comparative estimates
+    of cross-lingual transfer performance for TOD. We then introduce a new framework
+    for multilingual conversational specialization of pretrained language models (PrLMs)
+    that aims to facilitate cross-lingual transfer for arbitrary downstream TOD tasks.
+    Using such conversational PrLMs specialized for concrete target languages, we
+    systematically benchmark a number of zero-shot and few-shot cross-lingual transfer
+    approaches on two standard TOD tasks: Dialog State Tracking and Response Retrieval.
+    Our experiments show that, in most setups, the best performance entails the combination
+    of (i) conversational specialization in the target language and (ii) few-shot
+    transfer for the concrete TOD task. Most importantly, we show that our conversational
+    specialization in the target language allows for an exceptionally sample-efficient
+    few-shot transfer for downstream TOD tasks.'
+  venue: North American Chapter of the Association for Computational Linguistics
+  type: conference
+  authors: Chia-Chien Hung, Anne Lauscher, Ivan Vulic, Simone Paolo Ponzetto, Goran
+    Glavavs
+  pdf: http://arxiv.org/pdf/2205.10400
+- title: Measuring Harmful Sentence Completion in Language Models for LGBTQIA+ Individuals
+  date: 2022
+  abstract: Current language technology is ubiquitous and directly influences individuals’
+    lives worldwide. Given the recent trend in AI on training and constantly releasing
+    new and powerful large language models (LLMs), there is a need to assess their
+    biases and potential concrete consequences. While some studies have highlighted
+    the shortcomings of these models, there is only little on the negative impact
+    of LLMs on LGBTQIA+ individuals. In this paper, we investigated a state-of-the-art
+    template-based approach for measuring the harmfulness of English LLMs sentence
+    completion when the subjects belong to the LGBTQIA+ community. Our findings show
+    that, on average, the most likely LLM-generated completion is an identity attack
+    13% of the time. Our results raise serious concerns about the applicability of
+    these models in production environments.
+  venue: LTEDI
+  type: conference
+  authors: Debora Nozza, Federico Bianchi, Anne Lauscher, Dirk Hovy
+  pdf: https://aclanthology.org/2022.ltedi-1.4.pdf
+- title: 'DS-TOD: Efficient Domain Specialization for Task-Oriented Dialog'
+  date: 2021
+  abstract: Recent work has shown that self-supervised dialog-specific pretraining
+    on large conversational datasets yields substantial gains over traditional language
+    modeling (LM) pretraining in downstream task-oriented dialog (TOD). These approaches,
+    however, exploit general dialogic corpora (e.g., Reddit) and thus presumably fail
+    to reliably embed domain-specific knowledge useful for concrete downstream TOD
+    domains. In this work, we investigate the effects of domain specialization of
+    pretrained language models (PLMs) for TOD. Within our DS-TOD framework, we first
+    automatically extract salient domain-specific terms, and then use them to construct
+    DomainCC and DomainReddit – resources that we leverage for domain-specific pretraining,
+    based on (i) masked language modeling (MLM) and (ii) response selection (RS) objectives,
+    respectively. We further propose a resource-efficient and modular domain specialization
+    by means of domain adapters – additional parameter-light layers in which we encode
+    the domain knowledge. Our experiments with prominent TOD tasks – dialog state
+    tracking (DST) and response retrieval (RR) – encompassing five domains from the
+    MultiWOZ benchmark demonstrate the effectiveness of DS-TOD. Moreover, we show
+    that the light-weight adapter-based specialization (1) performs comparably to
+    full fine-tuning in single domain setups and (2) is particularly suitable for
+    multi-domain specialization, where besides advantageous computational footprint,
+    it can offer better TOD performance.
+  venue: Findings
+  type: conference
+  authors: Chia-Chien Hung, Anne Lauscher, Simone Paolo Ponzetto, Goran Glavas
+  pdf: https://aclanthology.org/2022.findings-acl.72.pdf
+- title: Sustainable Modular Debiasing of Language Models
+  date: 2021
+  abstract: 'Unfair stereotypical biases (e.g., gender, racial, or religious biases)
+    encoded in modern pretrained language models (PLMs) have negative ethical implications
+    for widespread adoption of state-of-the-art language technology. To remedy for
+    this, a wide range of debiasing techniques have recently been introduced to remove
+    such stereotypical biases from PLMs. Existing debiasing methods, however, directly
+    modify all of the PLMs parameters, which -- besides being computationally expensive
+    -- comes with the inherent risk of (catastrophic) forgetting of useful language
+    knowledge acquired in pretraining. In this work, we propose a more sustainable
+    modular debiasing approach based on dedicated debiasing adapters, dubbed ADELE.
+    Concretely, we (1) inject adapter modules into the original PLM layers and (2)
+    update only the adapters (i.e., we keep the original PLM parameters frozen) via
+    language modeling training on a counterfactually augmented corpus. We showcase
+    ADELE, in gender debiasing of BERT: our extensive evaluation, encompassing three
+    intrinsic and two extrinsic bias measures, renders ADELE, very effective in bias
+    mitigation. We further show that -- due to its modular nature -- ADELE, coupled
+    with task adapters, retains fairness even after large-scale downstream training.
+    Finally, by means of multilingual BERT, we successfully transfer ADELE, to six
+    target languages.'
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Anne Lauscher, Tobias Lüken, Goran Glavas
+  pdf: https://aclanthology.org/2021.findings-emnlp.411.pdf
+- title: 'RedditBias: A Real-World Resource for Bias Evaluation and Debiasing of Conversational
+    Language Models'
+  date: 2021
+  abstract: 'Text representation models are prone to exhibit a range of societal biases,
+    reflecting the non-controlled and biased nature of the underlying pretraining
+    data, which consequently leads to severe ethical issues and even bias amplification.
+    Recent work has predominantly focused on measuring and mitigating bias in pretrained
+    language models. Surprisingly, the landscape of bias measurements and mitigation
+    resources and methods for conversational language models is still very scarce:
+    it is limited to only a few types of bias, artificially constructed resources,
+    and completely ignores the impact that debiasing methods may have on the final
+    perfor mance in dialog tasks, e.g., conversational response generation. In this
+    work, we present REDDITBIAS, the first conversational data set grounded in the
+    actual human conversations from Reddit, allowing for bias measurement and mitigation
+    across four important bias dimensions: gender,race,religion, and queerness. Further,
+    we develop an evaluation framework which simultaneously 1)measures bias on the
+    developed REDDITBIAS resource, and 2)evaluates model capability in dialog tasks
+    after model debiasing. We use the evaluation framework to benchmark the widely
+    used conversational DialoGPT model along with the adaptations of four debiasing
+    methods. Our results indicate that DialoGPT is biased with respect to religious
+    groups and that some debiasing techniques can remove this bias while preserving
+    downstream task performance.'
+  venue: Annual Meeting of the Association for Computational Linguistics
+  type: conference
+  authors: Soumya Barikeri, Anne Lauscher, Ivan Vulic, Goran Glavas
+  pdf: https://aclanthology.org/2021.acl-long.151.pdf
+- title: Linguistic Diversity Scores for NLP Data Sets
+  date: 2021
+  abstract: null
+  venue: ''
+  type: conference
+  authors: Christos Christodouloupouloset al.
+  pdf: https://www.semanticscholar.org/paper/2cd2afbe7eba98f22ee7cea44c2a2dc1d7c8a9fc
+- title: 'Diachronic Analysis of German Parliamentary Proceedings: Ideological Shifts
+    through the Lens of Political Biases'
+  date: 2021
+  abstract: We analyze bias in historical corpora as encoded in diachronic distributional
+    semantic models by focusing on two specific forms of bias, namely a political
+    (i.e., anti-communism) and racist (i.e., antisemitism) one. For this, we use a
+    new corpus of German parliamentary proceedings, Deuparl, spanning the period 1867–2020.
+    We complement this analysis of historical biases in diachronic word embeddings
+    with a novel measure of bias on the basis of term co-occurrences and graph-based
+    label propagation. The results of our bias measurements align with commonly perceived
+    historical trends of antisemitic and anticommunist biases in German politics in
+    different time periods, thus indicating the viability of analyzing historical
+    bias trends using semantic spaces induced from historical corpora.
+  venue: ACM/IEEE Joint Conference on Digital Libraries
+  type: conference
+  authors: Tobias Walter, Celina Kirschner, Steffen Eger, Goran Glavavs, Anne Lauscher,
+    Simone Paolo Ponzetto
+  pdf: http://arxiv.org/pdf/2108.06295
+- title: 'DebIE: A Platform for Implicit and Explicit Debiasing of Word Embedding
+    Spaces'
+  date: 2021
+  abstract: 'Recent research efforts in NLP have demonstrated that distributional
+    word vector spaces often encode stereotypical human biases, such as racism and
+    sexism. With word representations ubiquitously used in NLP models and pipelines,
+    this raises ethical issues and jeopardizes the fairness of language technologies.
+    While there exists a large body of work on bias measures and debiasing methods,
+    to date, there is no platform that would unify these research efforts and make
+    bias measuring and debiasing of representation spaces widely accessible. In this
+    work, we present DebIE, the first integrated platform for (1) measuring and (2)
+    mitigating bias in word embeddings. Given an (i) embedding space (users can choose
+    between the predefined spaces or upload their own) and (ii) a bias specification
+    (users can choose between existing bias specifications or create their own), DebIE
+    can (1) compute several measures of implicit and explicit bias and modify the
+    embedding space by executing two (mutually composable) debiasing models. DebIE’s
+    functionality can be accessed through four different interfaces: (a) a web application,
+    (b) a desktop application, (c) a REST-ful API, and (d) as a command-line application.
+    DebIE is available at: debie.informatik.uni-mannheim.de.'
+  venue: Conference of the European Chapter of the Association for Computational Linguistics
+  type: conference
+  authors: Niklas Friedrich, Anne Lauscher, Simone Paolo Ponzetto, Goran Glavavs
+  pdf: https://aclanthology.org/2021.eacl-demos.11.pdf
+- title: Review for "A Meta-analysis of Semantic Classification of Citations"
+  date: 2021
+  abstract: null
+  venue: ''
+  type: conference
+  authors: Anne Lauscher
+  pdf: https://doi.org/10.1162/qss_a_00159/v2/review2
+- title: Scientia Potentia Est—On the Role of Knowledge in Computational Argumentation
+  date: 2021
+  abstract: Abstract Despite extensive research efforts in recent years, computational
+    argumentation (CA) remains one of the most challenging areas of natural language
+    processing. The reason for this is the inherent complexity of the cognitive processes
+    behind human argumentation, which integrate a plethora of different types of knowledge,
+    ranging from topic-specific facts and common sense to rhetorical knowledge. The
+    integration of knowledge from such a wide range in CA requires modeling capabilities
+    far beyond many other natural language understanding tasks. Existing research
+    on mining, assessing, reasoning over, and generating arguments largely acknowledges
+    that much more knowledge is needed to accurately model argumentation computationally.
+    However, a systematic overview of the types of knowledge introduced in existing
+    CA models is missing, hindering targeted progress in the field. Adopting the operational
+    definition of knowledge as any task-relevant normative information not provided
+    as input, the survey paper at hand fills this gap by (1) proposing a taxonomy
+    of types of knowledge required in CA tasks, (2) systematizing the large body of
+    CA work according to the reliance on and exploitation of these knowledge types
+    for the four main research areas in CA, and (3) outlining and discussing directions
+    for future research efforts in CA.
+  venue: Transactions of the Association for Computational Linguistics
+  type: conference
+  authors: Anne Lauscher, Henning Wachsmuth, Iryna Gurevych, Goran Glavavs
+  pdf: https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00525/2064612/tacl_a_00525.pdf
+- title: Visual Summary Identification From Scientific Publications via Self-Supervised
+    Learning
+  date: 2021
+  abstract: 'The exponential growth of scientific literature yields the need to support
+    users to both effectively and efficiently analyze and understand the some body
+    of research work. This exploratory process can be facilitated by providing graphical
+    abstracts–a visual summary of a scientific publication. Accordingly, previous
+    work recently presented an initial study on automatic identification of a central
+    figure in a scientific publication, to be used as the publication’s visual summary.
+    This study, however, have been limited only to a single (biomedical) domain. This
+    is primarily because the current state-of-the-art relies on supervised machine
+    learning, typically relying on the existence of large amounts of labeled data:
+    the only existing annotated data set until now covered only the biomedical publications.
+    In this work, we build a novel benchmark data set for visual summary identification
+    from scientific publications, which consists of papers presented at conferences
+    from several areas of computer science. We couple this contribution with a new
+    self-supervised learning approach to learn a heuristic matching of in-text references
+    to figures with figure captions. Our self-supervised pre-training, executed on
+    a large unlabeled collection of publications, attenuates the need for large annotated
+    data sets for visual summary identification and facilitates domain transfer for
+    this task. We evaluate our self-supervised pretraining for visual summary identification
+    on both the existing biomedical and our newly presented computer science data
+    set. The experimental results suggest that the proposed method is able to outperform
+    the previous state-of-the-art without any task-specific annotations.'
+  venue: Frontiers in Research Metrics and Analytics
+  type: conference
+  authors: Shintaro Yamamoto, Anne Lauscher, Simone Paolo Ponzetto, Goran Glavas,
+    S. Morishima
+  pdf: https://www.frontiersin.org/articles/10.3389/frma.2021.719004/pdf
+- title: 'MultiCite: Modeling realistic citations requires moving beyond the single-sentence
+    single-label setting'
+  date: 2021
+  abstract: Citation context analysis (CCA) is an important task in natural language
+    processing that studies how and why scholars discuss each others’ work. Despite
+    decades of study, computational methods for CCA have largely relied on overly-simplistic
+    assumptions of how authors cite, which ignore several important phenomena. For
+    instance, scholarly papers often contain rich discussions of cited work that span
+    multiple sentences and express multiple intents concurrently. Yet, recent work
+    in CCA is often approached as a single-sentence, single-label classification task,
+    and thus many datasets used to develop modern computational approaches fail to
+    capture this interesting discourse. To address this research gap, we highlight
+    three understudied phenomena for CCA and release MULTICITE, a new dataset of 12.6K
+    citation contexts from 1.2K computational linguistics papers that fully models
+    these phenomena. Not only is it the largest collection of expert-annotated citation
+    contexts to-date, MULTICITE contains multi-sentence, multi-label citation contexts
+    annotated through-out entire full paper texts. We demonstrate how MULTICITE can
+    enable the development of new computational methods on three important CCA tasks.
+    We release our code and dataset at https://github.com/allenai/multicite.
+  venue: North American Chapter of the Association for Computational Linguistics
+  type: conference
+  authors: Anne Lauscher, B. Ko, Bailey Kuehl, Sophie Johnson, David Jurgens, Arman
+    Cohan, Kyle Lo
+  pdf: https://aclanthology.org/2022.naacl-main.137.pdf
+- title: 'From Zero to Hero: On the Limitations of Zero-Shot Cross-Lingual Transfer
+    with Multilingual Transformers'
+  date: 2020
+  abstract: Massively multilingual transformers pretrained with language modeling
+    objectives (e.g., mBERT, XLM-R) have become a de facto default transfer paradigm
+    for zero-shot cross-lingual transfer in NLP, offering unmatched transfer performance.
+    Current downstream evaluations, however, verify their efficacy predominantly in
+    transfer settings involving languages with sufficient amounts of pretraining data,
+    and with lexically and typologically close languages. In this work, we analyze
+    their limitations and show that cross-lingual transfer via massively multilingual
+    transformers, much like transfer via cross-lingual word embeddings, is substantially
+    less effective in resource-lean scenarios and for distant languages. Our experiments,
+    encompassing three lower-level tasks (POS tagging, dependency parsing, NER), as
+    well as two high-level semantic tasks (NLI, QA), empirically correlate transfer
+    performance with linguistic similarity between the source and target languages,
+    but also with the size of pretraining corpora of target languages. We also demonstrate
+    a surprising effectiveness of inexpensive few-shot transfer (i.e., fine-tuning
+    on a few target-language instances after fine-tuning in the source) across the
+    board. This suggests that additional research efforts should be invested to reach
+    beyond the limiting zero-shot conditions.
+  venue: arXiv.org
+  type: conference
+  authors: Anne Lauscher, Vinit Ravishankar, Ivan Vulic, Goran Glavas
+  pdf: https://arxiv.org/abs/2005.00633
+- title: Creating a Domain-diverse Corpus for Theory-based Argument Quality Assessment
+  date: 2020
+  abstract: Computational models of argument quality (AQ) have focused primarily on
+    assessing the overall quality or just one specific characteristic of an argument,
+    such as its convincingness or its clarity. However, previous work has claimed
+    that assessment based on theoretical dimensions of argumentation could benefit
+    writers, but developing such models has been limited by the lack of annotated
+    data. In this work, we describe GAQCorpus, the first large, domain-diverse annotated
+    corpus of theory-based AQ. We discuss how we designed the annotation task to reliably
+    collect a large number of judgments with crowdsourcing, formulating theory-based
+    guidelines that helped make subjective judgments of AQ more objective. We demonstrate
+    how to identify arguments and adapt the annotation task for three diverse domains.
+    Our work will inform research on theory-based argumentation annotation and enable
+    the creation of more diverse corpora to support computational AQ assessment.
+  venue: Workshop on Argument Mining
+  type: conference
+  authors: Lily Ng, Anne Lauscher, Joel R. Tetreault, Courtney Napoles
+  pdf: https://arxiv.org/abs/2011.01589
+- title: 'Entities as Topic Labels: Combining Entity Linking and Labeled LDA to Improve
+    Topic Interpretability and Evaluability'
+  date: 2020
+  abstract: null
+  venue: ''
+  type: conference
+  authors: Anne Lauscheret al.
+  pdf: https://www.semanticscholar.org/paper/44cf520bb375b20beff2adf7bb466d3bb5cbb21e
+- title: 'From Zero to Hero: On the Limitations of Zero-Shot Language Transfer with
+    Multilingual Transformers'
+  date: 2020
+  abstract: Massively multilingual transformers (MMTs) pretrained via language modeling
+    (e.g., mBERT, XLM-R) have become a default paradigm for zero-shot language transfer
+    in NLP, offering unmatched transfer performance. Current evaluations, however,
+    verify their efficacy in transfers (a) to languages with sufficiently large pretraining
+    corpora, and (b) between close languages. In this work, we analyze the limitations
+    of downstream language transfer with MMTs, showing that, much like cross-lingual
+    word embeddings, they are substantially less effective in resource-lean scenarios
+    and for distant languages. Our experiments, encompassing three lower-level tasks
+    (POS tagging, dependency parsing, NER) and two high-level tasks (NLI, QA), empirically
+    correlate transfer performance with linguistic proximity between source and target
+    languages, but also with the size of target language corpora used in MMT pretraining.
+    Most importantly, we demonstrate that the inexpensive few-shot transfer (i.e.,
+    additional fine-tuning on a few target-language instances) is surprisingly effective
+    across the board, warranting more research efforts reaching beyond the limiting
+    zero-shot conditions.
+  venue: Conference on Empirical Methods in Natural Language Processing
+  type: conference
+  authors: Anne Lauscher, Vinit Ravishankar, Ivan Vulic, Goran Glavas
+  pdf: https://www.duo.uio.no/bitstream/10852/102833/1/PhD-Ravishankar-2023.pdf
+- title: Common Sense or World Knowledge? Investigating Adapter-Based Knowledge Injection
+    into Pretrained Transformers
+  date: 2020
+  abstract: 'Following the major success of neural language models (LMs) such as BERT
+    or GPT-2 on a variety of language understanding tasks, recent work focused on
+    injecting (structured) knowledge from external resources into these models. While
+    on the one hand, joint pre-training (i.e., training from scratch, adding objectives
+    based on external knowledge to the primary LM objective) may be prohibitively
+    computationally expensive, post-hoc fine-tuning on external knowledge, on the
+    other hand, may lead to the catastrophic forgetting of distributional knowledge.
+    In this work, we investigate models for complementing the distributional knowledge
+    of BERT with conceptual knowledge from ConceptNet and its corresponding Open Mind
+    Common Sense (OMCS) corpus, respectively, using adapter training. While overall
+    results on the GLUE benchmark paint an inconclusive picture, a deeper analysis
+    reveals that our adapter-based models substantially outperform BERT (up to 15-20
+    performance points) on inference tasks that require the type of conceptual knowledge
+    explicitly present in ConceptNet and OMCS. We also open source all our experiments
+    and relevant code under: https://github.com/wluper/retrograph.'
+  venue: Workshop on Knowledge Extraction and Integration for Deep Learning Architectures;
+    Deep Learning Inside Out
+  type: conference
+  authors: Anne Lauscher, Olga Majewska, Leonardo F. R. Ribeiro, Iryna Gurevych, N.
+    Rozanov, Goran Glavavs
+  pdf: https://www.aclweb.org/anthology/2020.deelio-1.5.pdf
+- title: 'AraWEAT: Multidimensional Analysis of Biases in Arabic Word Embeddings'
+  date: 2020
+  abstract: 'Recent work has shown that distributional word vector spaces often encode
+    human biases like sexism or racism. In this work, we conduct an extensive analysis
+    of biases in Arabic word embeddings by applying a range of recently introduced
+    bias tests on a variety of embedding spaces induced from corpora in Arabic. We
+    measure the presence of biases across several dimensions, namely: embedding models
+    (Skip-Gram, CBOW, and FastText) and vector sizes, types of text (encyclopedic
+    text, and news vs. user-generated content), dialects (Egyptian Arabic vs. Modern
+    Standard Arabic), and time (diachronic analyses over corpora from different time
+    periods). Our analysis yields several interesting findings, e.g., that implicit
+    gender bias in embeddings trained on Arabic news corpora steadily increases over
+    time (between 2007 and 2017). We make the Arabic bias specifications (AraWEAT)
+    publicly available.'
+  venue: Workshop on Arabic Natural Language Processing
+  type: conference
+  authors: Anne Lauscher, Rafik Takieddin, Simone Paolo Ponzetto, Goran Glavas
+  pdf: https://arxiv.org/abs/2011.01575
+- title: The OpenCitations Data Model
+  date: 2020
+  abstract: A variety of schemas and ontologies are currently used for the machine-readable
+    description of bibliographic entities and citations. This diversity, and the reuse
+    of the same ontology terms with different nuances, generates inconsistencies in
+    data. Adoption of a single data model would facilitate data integration tasks
+    regardless of the data supplier or context application. In this paper we present
+    the OpenCitations Data Model (OCDM), a generic data model for describing bibliographic
+    entities and citations, developed using Semantic Web technologies. We also evaluate
+    the effective reusability of OCDM according to ontology evaluation practices,
+    mention existing users of OCDM, and discuss the use and impact of OCDM in the
+    wider open science community.
+  venue: International Workshop on the Semantic Web
+  type: conference
+  authors: Marilena Daquino, S. Peroni, D. Shotton, Giovanni Colavizza, Behnam Ghavimi,
+    Anne Lauscher, Philipp Mayr, Matteo Romanello, P. Zumstein
+  pdf: https://pure.uva.nl/ws/files/62346819/Daquino2020_Chapter_TheOpenCitationsDataModel.pdf

@@ -1,0 +1,142 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="pub-page">
+
+  <div class="pub-filters">
+    <input type="text" id="pub-search" placeholder="Search..." />
+    <select id="pub-type">
+      <option value="">Type</option>
+      <option value="conference">Conference</option>
+      <option value="journal">Journal</option>
+      <option value="preprint">Preprint</option>
+      <option value="workshop">Workshop</option>
+    </select>
+    <select id="pub-date">
+      <option value="">Date</option>
+    </select>
+  </div>
+
+  <div id="pub-list">
+    {% for pub in site.data.publications %}
+    <div class="pub-entry"
+         data-type="{{ pub.type }}"
+         data-date="{{ pub.date }}"
+         data-title="{{ pub.title | downcase }}"
+         data-authors="{{ pub.authors | downcase }}">
+      <div class="pub-content">
+        <div class="pub-text">
+          <h2 class="archive__item-title">{{ pub.title }}</h2>
+          {% if pub.venue %}<p class="pub-venue">{{ pub.venue }}</p>{% endif %}
+          {% if pub.abstract %}<p class="archive__item-excerpt">{{ pub.abstract }}</p>{% endif %}
+          {% if pub.authors %}<p class="pub-authors">{{ pub.authors }}</p>{% endif %}
+          <div class="pub-buttons">
+            {% if pub.pdf %}<a href="{{ pub.pdf | relative_url }}" class="pub-btn">PDF</a>{% endif %}
+            {% if pub.page %}<a href="{{ pub.page | relative_url }}" class="pub-btn">Website</a>{% endif %}
+          </div>
+        </div>
+        {% if pub.image %}
+        <div class="pub-thumb">
+          <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+<!-- Cite modal -->
+<div id="cite-modal" style="display:none;">
+  <div id="cite-modal-inner">
+    <button id="cite-close">✕</button>
+    <pre id="cite-content"></pre>
+    <button id="cite-copy">Copy</button>
+  </div>
+</div>
+
+<style>
+.pub-filters { display: flex; gap: 0.8em; margin-bottom: 0em; flex-wrap: wrap; }
+.pub-filters input { padding: 0.5em 1em; border: 2px solid #333; font-size: 0.9em; width: 200px; }
+.pub-filters select { padding: 0.5em 1em; border: 1px solid #ccc; font-size: 0.9em; min-width: 110px; background: white; cursor: pointer; }
+.pub-filters input:focus { outline: none; }
+.pub-venue { font-size: 0.85em; color: #555; font-style: italic; margin: 0.1em 0 0.4em; }
+.pub-entry { border-bottom: 0px solid #f2f3f3; padding: 0em 0; }
+.pub-entry.hidden { display: none; }
+.pub-content { display: flex; gap: 1em; align-items: flex-start; }
+.pub-text { flex: 1; }
+.pub-thumb { flex-shrink: 0; width: 150px; }
+.pub-thumb img { width: 100%; border: 1px solid #f2f3f3; }
+
+.pub-date { font-size: 0.9em; margin: 0.1em 0 0.4em; }
+.pub-authors { font-size: 0.85em; color: #777; margin: 0.5em 0 0.7em; }
+
+.pub-buttons { display: flex; gap: 0.5em; flex-wrap: wrap; margin-top: 0.6em; }
+.pub-btn {
+  display: inline-block; padding: 0.2em 0.7em;
+  border: 1.5px solid #4273FF; color: #4273FF;
+  background: white; font-size: 0.8em; cursor: pointer;
+  text-decoration: none; border-radius: 3px;
+  font-family: inherit;
+}
+.pub-btn:hover { background: #4273FF; color: white; }
+
+#cite-modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+}
+#cite-modal-inner {
+  background: white; padding: 2em; max-width: 560px; width: 90%;
+  position: relative; border-radius: 4px;
+}
+#cite-close { position: absolute; top: 0.5em; right: 0.8em; background: none; border: none; font-size: 1.2em; cursor: pointer; }
+#cite-content { background: #f2f3f3; padding: 1em; overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; }
+#cite-copy { margin-top: 0.8em; padding: 0.4em 1em; background: #4273FF; color: white; border: none; cursor: pointer; border-radius: 3px; }
+</style>
+
+<script>
+const entries = document.querySelectorAll('.pub-entry');
+const dates = [...new Set([...entries].map(e => e.dataset.date))].sort().reverse();
+const dateSelect = document.getElementById('pub-date');
+dates.forEach(d => {
+  const opt = document.createElement('option');
+  opt.value = d; opt.textContent = d;
+  dateSelect.appendChild(opt);
+});
+
+function filterPubs() {
+  const search = document.getElementById('pub-search').value.toLowerCase();
+  const type = document.getElementById('pub-type').value;
+  const date = document.getElementById('pub-date').value;
+  entries.forEach(entry => {
+    const matchSearch = !search || entry.dataset.title.includes(search) || entry.dataset.authors.includes(search);
+    const matchType = !type || entry.dataset.type === type;
+    const matchDate = !date || entry.dataset.date === date;
+    entry.classList.toggle('hidden', !(matchSearch && matchType && matchDate));
+  });
+}
+
+document.getElementById('pub-search').addEventListener('input', filterPubs);
+document.getElementById('pub-type').addEventListener('change', filterPubs);
+document.getElementById('pub-date').addEventListener('change', filterPubs);
+
+const modal = document.getElementById('cite-modal');
+document.querySelectorAll('.cite-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('cite-content').textContent = btn.dataset.cite;
+    modal.style.display = 'flex';
+  });
+});
+document.getElementById('cite-close').addEventListener('click', () => modal.style.display = 'none');
+document.getElementById('cite-copy').addEventListener('click', () => {
+  navigator.clipboard.writeText(document.getElementById('cite-content').textContent);
+  document.getElementById('cite-copy').textContent = 'Copied!';
+  setTimeout(() => document.getElementById('cite-copy').textContent = 'Copy', 2000);
+});
+modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+</script>

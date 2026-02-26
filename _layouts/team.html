@@ -1,0 +1,76 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="team-page">
+
+  {% for category in site.data.team %}
+  <h2 class="archive__subtitle">{{ category[0] | replace: "_", " " | capitalize }}</h2>
+
+  {% if category[0] == "external_students" %}
+  <ul class="team-list">
+    {% for member in category[1] %}
+    <li>
+      {% if member.website %}<a href="{{ member.website }}">{{ member.name }}</a>
+      {% else %}{{ member.name }}{% endif %}
+      {% if member.role %}<span class="list-role">— {{ member.role }}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% else %}
+  <div class="team-grid">
+    {% for member in category[1] %}
+    <div class="team-member">
+      <div class="team-photo-wrap">
+        <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" class="team-photo">
+      </div>
+      <h3 class="member-name">
+        {% if member.website %}<a href="{{ member.website }}">{{ member.name }}</a>
+        {% else %}{{ member.name }}{% endif %}
+      </h3>
+      <p class="member-role">{{ member.role }}</p>
+      <div class="member-links">
+        {% if member.email %}<a href="mailto:{{ member.email }}"><i class="fas fa-fw fa-envelope"></i></a>{% endif %}
+        {% if member.twitter %}<a href="https://twitter.com/{{ member.twitter }}"><i class="fab fa-fw fa-x-twitter"></i></a>{% endif %}
+        {% if member.bluesky %}<a href="https://bsky.app/profile/{{ member.bluesky }}.bsky.social"><i class="fab fa-fw fa-bluesky"></i></a>{% endif %}
+        {% if member.mastodon %}<a href="https://mastodon.social/{{ member.mastodon }}"><i class="fab fa-fw fa-mastodon"></i></a>{% endif %}
+        {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}"><i class="fab fa-fw fa-orcid"></i></a>{% endif %}
+        {% if member.dblp %}<a href="{{ member.dblp }}"><i class="ai ai-dblp ai-fw"></i></a>{% endif %}
+        {% if member.github %}<a href="https://github.com/{{ member.github }}"><i class="fab fa-fw fa-github"></i></a>{% endif %}
+        {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}"><i class="fas fa-fw fa-graduation-cap"></i></a>{% endif %}
+        {% if member.linkedin %}<a href="https://linkedin.com/in/{{ member.linkedin }}"><i class="fab fa-fw fa-linkedin"></i></a>{% endif %}
+        {% if member.website %}<a href="{{ member.website }}"><i class="fas fa-fw fa-globe"></i></a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% endfor %}
+
+</div>
+
+<style>
+.team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2em; margin-bottom: 2.5em; }
+.team-member { width: 150px; text-align: center; }
+.team-photo-wrap { width: 150px; height: 150px; margin: 0 auto 0.8em; }
+.team-photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+.member-name { font-size: 0.95em; margin: 0.3em 0 0.1em; }
+.member-name a { color: #010A36; text-decoration: none; }
+.member-name a:hover { text-decoration: underline; }
+.member-role { font-size: 0.82em; color: #010A36; margin: 0.2em 0; }
+.member-links { margin-top: 0.5em; }
+.member-links a { color: #010A36; font-size: 1em; margin: 0 2px; }
+.member-links a:hover { color: #4273FF; }
+.archive__subtitle {
+  color: #001062;
+}
+.team-list { list-style: disc; padding-left: 1.5em; margin-bottom: 2.5em; }
+.team-list li { padding: 0.3em 0; font-size: 0.95em; }
+.team-list a { color: #010A36; text-decoration: none; }
+.team-list a:hover { color: #4273FF; text-decoration: underline; }
+.list-role { color: #888; font-size: 0.88em; }
+</style>

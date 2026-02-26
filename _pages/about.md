@@ -1,56 +1,266 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+<style>
+  :root {
+    --navy:   #0f1f3d;
+    --blue:   #1a3a6b;
+    --accent: #2e6fcf;
+    --light:  #e8eef7;
+    --muted:  #6b7a99;
+    --white:  #ffffff;
+    --radius: 10px;
+  }
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+  .tai-hero { margin-bottom: 2.5rem; }
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+  .tai-hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+  .tai-hero h1 span { color: var(--accent); }
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+  .tai-hero p {
+    font-size: 1.05rem;
+    color: #3a4a6a;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 0 1.5rem;
+  }
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+  .tai-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+  .tai-btn {
+    display: inline-block;
+    padding: 0.55rem 1.3rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.18s ease;
+  }
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+  .tai-btn-primary { background: var(--accent); color: var(--white) !important; border: 2px solid var(--accent); }
+  .tai-btn-primary:hover { background: var(--blue); border-color: var(--blue); }
+  .tai-btn-outline { background: transparent; color: var(--accent) !important; border: 2px solid var(--accent); }
+  .tai-btn-outline:hover { background: var(--light); }
 
-**Markdown generator**
+  .tai-section-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1rem;
+  }
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+  .tai-topics { margin-bottom: 2.5rem; }
+  .tai-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+  .tai-tag {
+    background: var(--light);
+    color: var(--blue);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1.5px solid #c8d6ee;
+  }
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+  .tai-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+  @media (max-width: 640px) {
+    .tai-highlights { grid-template-columns: 1fr; }
+  }
+
+  .tai-panel {
+    background: var(--white);
+    border: 1.5px solid #dde5f0;
+    border-radius: var(--radius);
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tai-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .tai-panel-header a {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .tai-panel-header a:hover { text-decoration: underline; }
+
+  .tai-item-meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+  }
+
+  .tai-item-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  .tai-item-authors {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  .tai-item-abstract {
+    font-size: 0.83rem;
+    color: #4a5a7a;
+    line-height: 1.55;
+    margin: 0 0 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .tai-item-link {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+  }
+
+  .tai-item-link:hover { text-decoration: underline; }
+
+  .tai-divider { border: none; border-top: 1.5px solid #e0e8f4; margin: 0 0 2rem; }
+
+  .tai-collab {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .tai-collab p { margin: 0; font-size: 0.95rem; color: var(--navy); font-weight: 500; }
+</style>
+
+<!-- ── HERO ── -->
+<div class="tai-hero">
+  <h1>Trustworthy AI Lab<br><span>Hamburg</span></h1>
+  <p>
+    We are a research group at the <strong>University of Hamburg</strong> led by
+    <a href="https://anne-lauscher.de/">Anne Lauscher</a>, working at the
+    intersection of artificial intelligence, natural language processing, and
+    human-centered computing. Our mission is to build AI systems that are
+    reliable, culturally aware, and aligned with human values.
+  </p>
+  <div class="tai-cta">
+    <a href="/publications/" class="tai-btn tai-btn-primary">Our Publications</a>
+    <a href="/team/" class="tai-btn tai-btn-outline">Meet the Team</a>
+    <a href="/join/" class="tai-btn tai-btn-outline">Join Us</a>
+  </div>
+</div>
+
+<!-- ── RESEARCH AREAS ── -->
+<div class="tai-topics">
+  <p class="tai-section-title">Research Areas</p>
+  <div class="tai-tags">
+    <span class="tai-tag">Trustworthy AI</span>
+    <span class="tai-tag">Natural Language Processing</span>
+    <span class="tai-tag">Fairness & Bias</span>
+    <span class="tai-tag">Multilingual NLP</span>
+    <span class="tai-tag">Human-Centered AI</span>
+    <span class="tai-tag">Cultural Awareness</span>
+    <span class="tai-tag">Gender-Inclusive Language</span>
+    <span class="tai-tag">Large Language Models</span>
+  </div>
+</div>
+
+<hr class="tai-divider">
+
+<!-- ── LATEST PUBLICATION + NEWS ── -->
+<div class="tai-highlights">
+
+  <!-- Latest Publication — auto-pulled from _data/publications.yml -->
+  <div class="tai-panel">
+    <div class="tai-panel-header">
+      <span class="tai-section-title" style="margin:0">Latest Publication</span>
+      <a href="/publications/">All publications →</a>
+    </div>
+
+    {% assign latest_pub = site.data.publications | first %}
+    {% if latest_pub %}
+      <div class="tai-item-meta">
+        {{ latest_pub.date }}{% if latest_pub.venue %} · {{ latest_pub.venue }}{% endif %}
+      </div>
+      <div class="tai-item-title">{{ latest_pub.title }}</div>
+      {% if latest_pub.authors %}
+        <div class="tai-item-authors">{{ latest_pub.authors }}</div>
+      {% endif %}
+      {% if latest_pub.abstract %}
+        <div class="tai-item-abstract">{{ latest_pub.abstract }}</div>
+      {% endif %}
+      {% if latest_pub.pdf %}
+        <a class="tai-item-link" href="{{ latest_pub.pdf }}" target="_blank">Read paper →</a>
+      {% else %}
+        <a class="tai-item-link" href="/publications/">View all publications →</a>
+      {% endif %}
+    {% else %}
+      <p style="color:var(--muted);font-size:0.9rem">No publications found.</p>
+    {% endif %}
+  </div>
+
+  <!-- Latest News — auto-pulled from _posts/ -->
+  <div class="tai-panel">
+    <div class="tai-panel-header">
+      <span class="tai-section-title" style="margin:0">Latest News</span>
+      <a href="/news/">All news →</a>
+    </div>
+
+  {% for post in site.data.news limit:2 %}
+    <div class="tai-item-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+    <div class="tai-item-title">{{ post.text }}</div>
+  {% else %}
+    <p style="color:var(--muted);font-size:0.9rem">No news posts yet.</p>
+  {% endfor %}
+  </div>
+
+
+
+
+
+</div>
+
+<hr class="tai-divider">
+

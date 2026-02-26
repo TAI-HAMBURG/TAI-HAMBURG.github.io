@@ -1,0 +1,156 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="join-page">
+
+  <p class="join-intro">
+    We are always looking for motivated researchers to join our lab, cooperate or do a research visit.
+    If you are passionate about NLP and want to work on impactful, 
+    socially relevant problems — we'd love to hear from you.
+  </p>
+
+  <!-- Open Positions -->
+  <div class="join-section">
+    <h2 class="join-section-title">Open Positions</h2>
+    <div class="join-positions">
+
+      <div class="join-card">
+            We currently do not have any open positions.
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+</div>
+
+<style>
+.join-page { max-width: 820px; }
+
+.join-intro {
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #444;
+  border-left: 3px solid #4273FF;
+  padding-left: 1em;
+  margin-bottom: 2.5em;
+}
+
+.join-section { margin-bottom: 3em; }
+.join-section-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 1.2em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* Position cards */
+.join-positions { display: flex; flex-direction: column; gap: 1.2em; }
+.join-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 1.4em 1.6em;
+  background: #fafafa;
+}
+.join-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 0.7em;
+}
+.join-role { font-size: 1.05em; font-weight: 600; }
+.join-badge {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2em 0.6em;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.badge-open { background: #eafaf1; color: #1e8449; }
+.badge-closed { background: #f2f3f3; color: #999; }
+
+.join-card p { font-size: 0.95em; color: #444; margin-bottom: 0.8em; }
+.join-requirements {
+  font-size: 0.88em;
+  color: #555;
+  padding-left: 1.2em;
+  margin-bottom: 1em;
+}
+.join-requirements li { margin-bottom: 0.3em; }
+
+.join-btn {
+  display: inline-block;
+  padding: 0.4em 1.1em;
+  border: 1.5px solid #4273FF;
+  color: #4273FF;
+  border-radius: 3px;
+  font-size: 0.85em;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.join-btn:hover { background: #4273FF; color: white; }
+.btn-disabled {
+  border-color: #ccc;
+  color: #aaa;
+  pointer-events: none;
+}
+
+/* Perks grid */
+.join-perks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2em;
+}
+.join-perk {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 1.2em;
+}
+.join-perk i {
+  font-size: 1.4em;
+  color: #4273FF;
+  margin-bottom: 0.5em;
+}
+.join-perk h3 { font-size: 0.95em; font-weight: 600; margin: 0.3em 0; }
+.join-perk p { font-size: 0.88em; color: #555; margin: 0; }
+
+/* How to apply steps */
+.join-steps { display: flex; flex-direction: column; gap: 0; }
+.join-step {
+  display: flex;
+  gap: 1.2em;
+  align-items: flex-start;
+  padding: 1em 0;
+  border-bottom: 1px solid #f2f3f3;
+}
+.join-step:last-child { border-bottom: none; }
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #4273FF;
+  color: white;
+  font-weight: 700;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.1em;
+}
+.step-text h3 { font-size: 0.95em; font-weight: 600; margin: 0 0 0.3em; }
+.step-text p { font-size: 0.9em; color: #555; margin: 0; }
+.step-text a { color: #4273FF; }
+
+@media (max-width: 600px) {
+  .join-perks { grid-template-columns: 1fr; }
+}
+</style>

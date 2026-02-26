@@ -1,0 +1,18 @@
+#tags can be paper, award, talk, new member, media, grant,
+- date: "February 2026"
+  tag: "new member"
+  text: "Welcome to our new PhD student Urs Zaberer joining the lab!"
+
+- date: "January 2026"
+  tag: "paper"
+  text: "Three papers accepted at the EACL 2026!"
+  link: "https://2026.eacl.org/"
+
+- date: "November 2025"
+  tag: "talk"
+  text: "Our work was featured in the Tagesschau, Germany's most-watched news program."
+  link: "https://www.tagesschau.de/wissen/forschung/ki-diskriminiert-dialekte-100.html"
+
+- date: "May 2025"
+  tag: "award"
+  text: "Our work 'Multi3Hate' won an Outstanding Paper Award."

@@ -1,0 +1,125 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="news-page">
+
+  <div class="news-timeline">
+    {% assign news_by_date = site.data.news %}
+    {% for item in news_by_date %}
+    <div class="news-item">
+      <div class="news-left">
+        <span class="news-date">{{ item.date }}</span>
+      </div>
+      <div class="news-line">
+        <div class="news-dot"></div>
+      </div>
+      <div class="news-right">
+        {% if item.tag %}
+        <span class="news-tag tag-{{ item.tag | replace: ' ', '-' | downcase }}">{{ item.tag }}</span>
+        {% endif %}
+        <p class="news-text">
+          {% if item.link %}
+            <a href="{{ item.link }}" target="_blank">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+<style>
+.news-page { max-width: 780px; }
+
+.news-timeline { position: relative; padding: 0.5em 0; }
+
+.news-item {
+  display: grid;
+  grid-template-columns: 130px 30px 1fr;
+  gap: 0;
+  margin-bottom: 0;
+  align-items: stretch;
+}
+
+/* Date column */
+.news-left {
+  text-align: right;
+  padding: 0.6em 1em 0.6em 0;
+  padding-top: 0.75em;
+}
+.news-date {
+  font-size: 0.82em;
+  color: #999;
+  white-space: nowrap;
+}
+
+/* Timeline line + dot column */
+.news-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.news-line::before {
+  content: '';
+  width: 2px;
+  background: #e8e8e8;
+  flex: 0 0 0.75em;
+}
+.news-line::after {
+  content: '';
+  width: 2px;
+  background: #e8e8e8;
+  flex: 1;
+}
+.news-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4273FF;
+  flex-shrink: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Content column */
+.news-right {
+  padding: 0.5em 0 1em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.news-tag {
+  display: inline-block;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15em 0.6em;
+  border-radius: 20px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Tag colors */
+.tag-paper       { background: #dff0fa; color: #2980b9; }
+.tag-award       { background: #fef9e7; color: #d4ac0d; }
+.tag-talk        { background: #eafaf1; color: #1e8449; }
+.tag-new-member  { background: #f5eef8; color: #7d3c98; }
+.tag-media       { background: #fdebd0; color: #ca6f1e; }
+.tag-grant       { background: #fdfefe; color: #148f77; border: 1px solid #148f77; }
+
+.news-text {
+  font-size: 0.95em;
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+}
+.news-text a { color: #333; text-decoration: none; }
+.news-text a:hover { text-decoration: underline; }
+</style>
