@@ -53,7 +53,7 @@ In this group study, students will investigate Hamburg's AI surveillance landsca
 
 Students can form subtopics within this theme; for example, surveillance mapping, policy and discourse analysis, grassroots organizing, or effectiveness critique; depending on their interests and skills.
 
-#### Key Resources
+## Key Resources
 
 - [Hamburg Police IVBeo project page](https://www.polizei.hamburg/erprobung-intelligenter-videobeobachtung-in-hamburg-wird-fortgesetzt-1112894)
 - [Surveillance under Surveillance](https://sunders.uber.space/de/)
@@ -63,7 +63,7 @@ Students can form subtopics within this theme; for example, surveillance mapping
 
 ## Logistics
 
-- **Start:** June 2026 (after AIES submission deadline)
+- **Start:** Late May
 - **Duration:** 5–7 months. You set your own intermediate deadlines; the pace is flexible.
 - **Group size:** 6–10 students.
 - **Presence:** You should be based in Hamburg for the duration of the project. Regular attendance at group meetings is expected.
@@ -71,8 +71,7 @@ Students can form subtopics within this theme; for example, surveillance mapping
 ## Deliverables
 
 - Oberseminar presentation of your final results.
-- A community-facing output co-developed with partner organizations (e.g., public report, workshop, informational resource).
-- GitHub repository containing code, data, and documentation.
+- A community-facing output co-developed with partner organizations (e.g., public report, blog, informational resource).
 
 ## Prerequisites
 
