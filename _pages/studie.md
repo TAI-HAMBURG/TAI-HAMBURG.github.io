@@ -54,6 +54,8 @@ In this group study, students will investigate Hamburg's AI surveillance landsca
 
 Students can form subtopics within this theme; for example, surveillance mapping, policy and discourse analysis, grassroots organizing, or effectiveness critique; depending on their interests and skills.
 
+Findings of this study will culminate in a publication in conferences or workshops like FAccT or AIES.
+
 ## Key Resources
 
 - [Hamburg Police IVBeo project page](https://www.polizei.hamburg/erprobung-intelligenter-videobeobachtung-in-hamburg-wird-fortgesetzt-1112894)
