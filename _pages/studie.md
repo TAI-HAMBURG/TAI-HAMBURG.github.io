@@ -1,7 +1,6 @@
 ---
-layout: page
-title: "Student Projects"
 permalink: /studie/
+title: "Student Projects"
 author_profile: true
 ---
 
