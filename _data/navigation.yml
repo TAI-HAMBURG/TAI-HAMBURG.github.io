@@ -18,7 +18,4 @@ main:
     url: /team/
     
   - title: "Join Us"
-    url: /join/
-
- - title: "Student Projects"
-    url: /studie/ 
+    url: /join/ 
