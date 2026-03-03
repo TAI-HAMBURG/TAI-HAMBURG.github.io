@@ -4,6 +4,8 @@ title: "Student Projects"
 author_profile: true
 ---
 
+For the summer semester, we are providing the following studie (student projects). Students can also do thesis or Basecamp project on these topics. Students who are looking for research experience can also join these group student projects. 
+
 # LLM studie, suited for students with excellent programming skills
 
 ## Topic
