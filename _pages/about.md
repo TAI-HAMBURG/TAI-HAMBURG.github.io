@@ -189,6 +189,7 @@ redirect_from:
     <a href="/publications/" class="tai-btn tai-btn-primary">Our Publications</a>
     <a href="/team/" class="tai-btn tai-btn-outline">Meet the Team</a>
     <a href="/join/" class="tai-btn tai-btn-outline">Join Us</a>
+    <a href="/studie/" class="tai-btn tai-btn-outline">Student Projects</a>
   </div>
 </div>
 
