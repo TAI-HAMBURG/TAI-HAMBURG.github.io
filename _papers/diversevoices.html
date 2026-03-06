@@ -988,10 +988,19 @@
             style="width:100%; display:block;" />
           <div class="figure-caption">
             <div class="figure-caption-label">Figure 1b</div>
-            <p>Gender discrimination by gender detection performance. Models are grouped into high (>80%) and low (<span>&#8804;</span> 80%) detection accuracy. Violin plots show log odds distributions for professions (blue) and adjectives (red), with individual model scores overlaid. Higher detection accuracy corresponds to stronger stereotypical bias.
+            <p>Gender discrimination by gender detection performance. Models are grouped into high (>80%) and low (<span>&#8804;</span> 80%) detection accuracy. 
+              Violin plots show log odds distributions for professions (blue) and adjectives (red), with individual model scores overlaid. Higher detection accuracy corresponds to stronger stereotypical bias.
             </p>
           </div>
         </div>
+        <div class="figure-block" style="grid-column: 1 / -1;">
+    <img src="../images/paper_plots/text_bias_comparison_plot.svg" alt="Figure 1c" style="width:100%; display:block;" />
+    <div class="figure-caption">
+      <div class="figure-caption-label">Figure 1c</div>
+      <p>Voice amplifies bias beyond text. Bars show log odds ratios for voice (audio) versus text inputs; error bars are 95% CIs. 
+        Voice consistently exceeds text-based bias, except in GPT-4o Audio, demonstrating discrimination emerges from paralinguistic cues.</p>
+    </div>
+  </div>
       </div>
     </div>
   </section>
@@ -1038,24 +1047,21 @@
       </div>
 
       <div class="figures-grid reveal reveal-delay-1" style="grid-template-columns: 55% 45%;">
-        <div class="figure-block">
-          <img src="../images/paper_plots/survey_results_discrimination.png" alt="Figure 2a"
-            style="width:100%; display:block;" />
-          <div class="figure-caption">
-            <div class="figure-caption-label">Figure 2a</div>
-            <p>Accessibility benefit scores by demographic group — older adults, users with disabilities, and infrequent
-              users.</p>
-          </div>
-        </div>
-        <div class="figure-block">
-          <img src="../images/paper_plots/survey_ols_results.png" alt="Figure 2b" style="width:100%; display:block;" />
-          <div class="figure-caption">
-            <div class="figure-caption-label">Figure 2b</div>
-            <p>Risk awareness and adoption likelihood across user groups, stratified by chatbot usage frequency and
-              gender.</p>
-          </div>
-        </div>
-      </div>
+  <div class="figure-block">
+    <img src="../images/paper_plots/survey_results_discrimination.png" alt="Figure 2a" style="width:100%; display:block;" />
+    <div class="figure-caption">
+      <div class="figure-caption-label">Figure 2a</div>
+      <p>User responses (n=1,000) to whether learning that voice systems infer personal attributes would affect willingness to use voice interaction. Stacked bars show response percentages grouped by current chatbot usage frequency. Non-users and infrequent users express greater hesitancy than frequent users.</p>
+    </div>
+  </div>
+  <div class="figure-block">
+    <img src="../images/paper_plots/survey_ols_results.png" alt="Figure 2b" style="width:100%; display:block;" />
+    <div class="figure-caption">
+      <div class="figure-caption-label">Figure 2b</div>
+      <p>Predictors of hesitancy toward voice-based attribute inference. Odds ratios from ordered logistic regression with 95% confidence intervals (error bars). Red points indicate lower hesitancy; blue points indicate higher hesitancy. Frequent chatbot usage (OR=0.78) and male sex (OR=0.65) significantly reduce concern about attribute inference. Significance: ***p <span>&#60;</span> 0.001, **p <span>&#60;</span> 0.01.</p>
+    </div>
+  </div>
+</div>
     </div>
   </section>
 
@@ -1075,7 +1081,7 @@
       However, further research is needed to assess viability across models and to evaluate the impact of pitch modification on overall model performance.</p>
       </div>
 
-      <div class="finding-callout reveal">
+      <div class="finding-callout reveal" style="grid-template-columns: repeat(2, 1fr);">
         <div class="finding-callout-item">
           <div class="stat">pitch</div>
           <div class="stat-label">Voice pitch modulates the strength of stereotypical associations in audio LLMs</div>
@@ -1092,7 +1098,8 @@
           style="width:100%; display:block;" />
         <div class="figure-caption">
           <div class="figure-caption-label">Figure 3a</div>
-          <p>Stereotype score as a continuous function of voice pitch, across model and task conditions.</p>
+          <p>Pitch manipulation reverses stereotypical associations. High-pitched voices (Q8) were incrementally lowered toward Q1's mean pitch in the adjective association task. 
+            Dots show bias score progression and the circle the step matching Q1's bias the closest.</p>
         </div>
       </div>
 
