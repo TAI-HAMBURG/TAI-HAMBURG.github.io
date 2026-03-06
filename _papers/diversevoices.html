@@ -448,10 +448,12 @@
     }
 
     /* ── STUDY COLOUR THEMING ── */
-    #study1 .section-tag,
-    #study1 .section-tag::before {
+    #study1 .section-tag {
       color: var(--accent2);
+    }
+    #study1 .section-tag::before {
       background: var(--accent2);
+      color: var(--accent2);
     }
 
     #study1 h2 em {
@@ -831,7 +833,7 @@
         in Generative AI
       </h1>
       <p class="hero-sub">
-        As AI systems become more accessible, the harms they perpetuate
+        Voice interaction promises to make AI systems become more accessible, the harms they perpetuate
         may scale accordingly — widening societal disparities rather than closing them.
       </p>
       <div class="btn-row">
@@ -880,7 +882,7 @@
       <div class="tension reveal">
         <div class="tension-side">
           <div class="tension-label good">The Promise</div>
-          <div class="tension-title good">Voice Access</div>
+          <div class="tension-title good">Greater Accessibility</div>
           <div class="tension-desc">Voice interaction removes barriers for users with limited literacy, motor
             impairments, or mobile-only access — extending AI to those excluded by text.</div>
         </div>
@@ -895,7 +897,7 @@
           </div>
         </div>
         <div class="tension-side">
-          <div class="tension-label bad">The Cost</div>
+          <div class="tension-label bad">The Risk</div>
           <div class="tension-title bad">Discrimination</div>
           <div class="tension-desc">Speech carries identity cues users cannot mask. Audio LLMs exploit these to produce
             gender-stereotyped outputs — amplifying bias beyond text-based interaction.</div>
@@ -949,8 +951,7 @@
           <img src="../images/paper_plots/gender_bias_bars.png" alt="Figure 1a" style="width:100%; display:block;" />
           <div class="figure-caption">
             <div class="figure-caption-label">Figure 1a</div>
-            <p>Gender-stereotyped adjective assignments by model across female and male voice conditions, compared to
-              text baseline.</p>
+            <p>Log odds ratios of gender–stereotype associations across models. Positive values indicate stereotypical, negative counter-stereotypical associations.</p>
           </div>
         </div>
         <div class="figure-block">
@@ -958,7 +959,7 @@
             style="width:100%; display:block;" />
           <div class="figure-caption">
             <div class="figure-caption-label">Figure 1b</div>
-            <p>Occupation stereotype scores by voice condition across audio LLMs, with text-prompt baselines overlaid.
+            <p>Gender discrimination by gender detection performance. Models are grouped into high (>80%) and low (<span>&#8804;</span> 80%) detection accuracy. Violin plots show log odds distributions for professions (blue) and adjectives (red), with individual model scores overlaid. Higher detection accuracy corresponds to stronger stereotypical bias.
             </p>
           </div>
         </div>
@@ -1035,12 +1036,14 @@
       <div class="section-tag">Study 3</div>
       <h2>Potential <em>Mitigation</em> Strategies</h2>
       <div class="prose reveal">
-        <p>Recognising that voice-based accessibility creates new pathways for discrimination, we investigate how
-          acoustic features causally shape audio LLM behaviour. We find that the strength of stereotypical associations
-          is modulated by voice pitch — discrimination is not limited to categorical gender classifications, but
-          operates along the full pitch spectrum.</p>
-        <p>Building on this, we systematically manipulate pitch to establish a causal link between this acoustic feature
-          and gender-discriminatory outputs, revealing pitch as a concrete lever for mitigation.</p>
+      <p></p>Having established that voice creates new pathways for discrimination, we investigate whether acoustic features can serve as a lever for mitigation. 
+      Specifically, we ask whether voice pitch modulates the strength of stereotypical associations, and whether systematic pitch manipulation can causally reduce discriminatory outputs.</p>
+      <p><strong>Pitch drives discrimination continuously</strong>- — Across most models, the selection of female-stereotyped terms increased systematically with higher voice pitch. 
+        This suggests gender discrimination operates as a continuous function of pitch.</p>
+    <p><strong>Pitch manipulation reduces bias</strong> — Lowering the pitch of high-pitched voices to match low-pitched voices induced a graded shift in model outputs across all models. 
+      After pitch adjustment, no statistically significant differences remained between the female term ratios of pitch-modified and naturally low-pitched voices.</p>
+    <p><strong>A foundation for mitigation</strong> — These findings establish pitch as a concrete, causal lever for reducing gender-discriminatory outputs. 
+      However, further research is needed to assess viability across models and to evaluate the impact of pitch modification on overall model performance.</p>
       </div>
 
       <div class="finding-callout reveal">
@@ -1049,14 +1052,8 @@
           <div class="stat-label">Voice pitch modulates the strength of stereotypical associations in audio LLMs</div>
         </div>
         <div class="finding-callout-item">
-          <div class="stat">causal</div>
-          <div class="stat-label">Systematic pitch manipulation establishes a causal acoustic pathway to discriminatory
-            outputs</div>
-        </div>
-        <div class="finding-callout-item">
-          <div class="stat">lever</div>
-          <div class="stat-label">Pitch emerges as a concrete, actionable target for bias mitigation in voice systems
-          </div>
+          <div class="stat">mitigation</div>
+          <div class="stat-label">Pitch modification eliminated statistically significant bias differences across all tested models</div>
         </div>
       </div>
 
@@ -1085,34 +1082,24 @@
       <h2>What We <em>Found</em></h2>
 
       <div class="findings-grid">
-        <div class="finding reveal">
-          <span class="finding-icon">📈</span>
+      <div class="finding reveal">
+          <span class="finding-icon">🎙️</span>
           <div class="finding-num">Finding 01</div>
-          <h3>Bias scales with adoption</h3>
-          <p>As generative AI tools reach more users, discriminatory outputs are not diluted — they compound, affecting
-            more downstream decisions across hiring, healthcare, and law.</p>
+          <h3>Voice amplifies gender discrimination</h3>
+          <p>Audio LLMs systematically assign gender-stereotyped traits and occupations based on speaker voice alone — and do so more strongly than equivalent text prompts. Models with higher gender detection accuracy exhibit the strongest bias, meaning benchmark-optimized models are inadvertently optimized for discrimination.</p>
         </div>
         <div class="finding reveal reveal-delay-1">
           <span class="finding-icon">🌍</span>
           <div class="finding-num">Finding 02</div>
-          <h3>Marginalised groups bear disproportionate costs</h3>
-          <p>Groups already subject to societal discrimination are most exposed to AI-amplified bias, creating a
-            feedback loop that reinforces existing inequalities.</p>
-        </div>
-        <div class="finding reveal reveal-delay-2">
-          <span class="finding-icon">🔓</span>
-          <div class="finding-num">Finding 03</div>
-          <h3>Ease of access reduces friction against misuse</h3>
-          <p>Simplified deployment lowers the effort required to generate discriminatory content at scale, shifting the
-            burden of harm mitigation onto affected communities.</p>
-        </div>
+          <h3>Accessibility gains come with a hidden cost</h3>
+        <p>34% of users would increase chatbot use if voice interaction were available. Yet when informed that voice systems infer personal attributes, infrequent users — those who stand to gain most from voice access — are five times more likely to disengage than daily users, threatening to undermine the very accessibility gains voice interaction promises.</p>
       </div>
-
-      <div class="pull-quote reveal" style="margin-top: 3rem;">
-        <p>
-          Accessibility and fairness are not the same thing. A tool that reaches
-          everyone equally can still harm some people far more than others.
-        </p>
+        <div class="finding reveal reveal-delay-2">
+        <span class="finding-icon">🎚️</span>
+        <div class="finding-num">Study 03</div>
+        <h3>Pitch is a causal lever for mitigation</h3>
+        <p>Gender discrimination operates as a continuous function of voice pitch, not a binary gender marker. Systematically lowering pitch reduced bias to statistically insignificant levels across all tested models — closing an 18.3 percentage point gap to just 0.5 — establishing pitch manipulation as a concrete pathway for mitigation.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -1133,28 +1120,24 @@
 
       <div class="implications">
         <div class="impl-card reveal">
-          <span class="impl-icon">⚖️</span>
-          <h3>Policy & Regulation</h3>
-          <p>Regulatory frameworks must account for scale effects. Systems cleared at low adoption may pose unacceptable
-            risks at mass deployment — current evaluation paradigms are insufficient.</p>
+          <span class="impl-icon">⚠️</span>
+          <h3>A New Fairness Challenge</h3>
+          <p>Unlike text, vocal characteristics are inherent and largely immutable — speakers cannot mask their voice, nor should they bear responsibility for doing so. This represents a fundamentally different fairness challenge than those previously studied in LLMs.</p>
         </div>
         <div class="impl-card reveal reveal-delay-1">
-          <span class="impl-icon">🔬</span>
-          <h3>AI Fairness Research</h3>
-          <p>Bias benchmarks evaluated on small samples cannot predict harm at scale. Future work must model
-            discriminatory impact as a function of deployment reach.</p>
+          <span class="impl-icon">📐</span>
+          <h3>Benchmarks Incentivize Discrimination</h3>
+          <p>Gender detection is explicitly evaluated in prominent audio LLM benchmarks, inadvertently incentivizing developers to build discriminatory capabilities into their systems. Current evaluation paradigms must be reconsidered.</p>
         </div>
         <div class="impl-card reveal reveal-delay-2">
-          <span class="impl-icon">🏗️</span>
-          <h3>System Design</h3>
-          <p>Accessibility features cannot be bolted on after bias mitigation. The two must be co-designed, treating
-            fairness as a prerequisite for responsible scaling.</p>
+          <span class="impl-icon">🛡️</span>
+          <h3>Existing Safeguards Fail</h3>
+          <p>Conventional bias mitigation — rebalanced training data, penalization of stereotypical outputs, post-hoc safety mechanisms — catastrophically fails when voice modality is introduced. Voice creates new discrimination pathways that text-based guardrails cannot intercept.</p>
         </div>
         <div class="impl-card reveal reveal-delay-3">
           <span class="impl-icon">🤝</span>
-          <h3>Community Accountability</h3>
-          <p>Affected communities must be included in deployment decisions — not as recipients of technology, but as
-            co-determinants of whether and how it scales.</p>
+          <h3>Inclusion and Fairness Must Be Co-Designed</h3>
+          <p>The modality designed to enhance accessibility can simultaneously catalyze discrimination that most severely harms the populations it aims to serve. Future research and deployment must treat inclusion and fairness as inseparable goals, not competing ones.</p>
         </div>
       </div>
     </div>
